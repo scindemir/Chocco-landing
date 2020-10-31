@@ -383,7 +383,7 @@ img {
   margin-top: 14px;
 }
 .reviews__switcher:after {
-  content: url("../../img/png/berry5.png");
+  content: url("../img/png/berry5.png");
   position: absolute;
   bottom: -150px;
   left: -78px;
@@ -393,13 +393,13 @@ img {
   position: relative;
 }
 .section__reviews:after {
-  content: url("../../img/png/berry4.png");
+  content: url("../img/png/berry4.png");
   position: absolute;
   top: 8%;
   right: 0px;
 }
 .section__reviews:before {
-  content: url("../../img/png/ornament.png");
+  content: url("../img/png/ornament.png");
   position: absolute;
   bottom: -28%;
   left: 0px;

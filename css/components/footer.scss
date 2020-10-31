@@ -1,0 +1,33 @@
+.footer {
+  position: relative;
+  bottom: 0;
+  height: 95px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.call__number-footer {
+  color: $darkGreen;
+  text-decoration: none;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+.footer__phone {
+  display: flex;
+}
+
+.footer__address {
+  color: #292929;
+  font-size: 21px;
+  line-height: 24px;
+  padding-top: 22px;
+  margin-bottom: 4px;
+}
+
+.call__logo {
+  width: 12px;
+  height: 12px;
+  margin-right: 7px;
+  align-self: center;
+}

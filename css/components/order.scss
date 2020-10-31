@@ -1,0 +1,35 @@
+.section__order {
+  background: url("../../img/png/pattern.png");
+  color: $darkGreen;
+  position: relative;
+
+  &:before {
+    content: url("../../img/png/berry7.png");
+    position: absolute;
+    top: -17%;
+    right: 0;
+  }
+
+  &:after {
+    content: url("../../img/png/berry6.png");
+    position: absolute;
+    top: 78%;
+    left: 0;
+  }
+
+}
+
+.section__head-title {
+  color: $darkGreen;
+}
+
+.order__form-right {
+  position: relative;
+
+  &:after {
+    content: url("../../img/png/leaf4.png");
+    position: absolute;
+    top: 48%;
+    right: -16%;
+  }
+}

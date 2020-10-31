@@ -1,0 +1,25 @@
+.section {
+  height: 100vh;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section__head {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.section__head-title {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 58px;
+  text-transform: uppercase;
+  color: #292929;
+  margin-bottom: 6px;
+}
+
+.section__head-text {
+  padding: 0px 26%;
+}

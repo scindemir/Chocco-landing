@@ -1,0 +1,51 @@
+.about__item {
+  text-align: center;
+}
+
+.benefits__pic {
+  display: inline-block;
+  position: relative;
+  width: 128px;
+  height: 128px;
+  background: #F2F5F4;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.benefits__pic-icon {
+  height: 64px;
+  width: 64px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.benefits__title {
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 32px;
+  color: #292929;
+  margin-bottom: 14px;
+}
+
+.benefits {
+  margin-top: 2%;
+}
+
+.section__head {
+  margin-bottom: 5%;
+}
+
+.section__about {
+  position: relative;
+  background: url("../../img/png/leaf-ornament.png") left bottom 50% no-repeat;
+
+  &:before {
+    content: url("../../img/png/berry3.png");
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+  }
+}

@@ -1,0 +1,51 @@
+.hero { 
+  background: url("../../img/png/bg-ornament.png") right bottom no-repeat;
+  background-color: $blue;
+  height: 100vh;
+  min-height: 650px;
+  color: #FFFFFF;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: url("../../img/png/leaf3.png");
+    bottom: -40px;
+    left: 2%;
+  }
+
+  &:after {
+    position: absolute;
+    content: url("../../img/png/hero-berries.png");
+    bottom: -68px;
+    right: 8%;
+  }
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 24px 0 46px;
+  background: url("../../img/png/chocs.png") right center / 50% auto no-repeat;
+}
+
+.hero__content {
+  width: 42%;
+}
+
+.hero__content-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.hero__content-text {
+  font-weight: 400;
+  font-size: 21px;
+  margin-bottom: 40px;
+  padding-right: 10%;
+}
+

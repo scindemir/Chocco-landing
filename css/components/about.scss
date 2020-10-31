@@ -40,10 +40,10 @@
 
 .section__about {
   position: relative;
-  background: url("../../img/png/leaf-ornament.png") left bottom 50% no-repeat;
+  background: url("../img/png/leaf-ornament.png") left bottom 50% no-repeat;
 
   &:before {
-    content: url("../../img/png/berry3.png");
+    content: url("../img/png/berry3.png");
     position: absolute;
     bottom: -80px;
     left: 0;

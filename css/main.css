@@ -451,8 +451,8 @@ img {
 .section__order:after {
   content: url("../img/png/berry6.png");
   position: absolute;
-  top: 78%;
-  left: 0;
+  top: 80%;
+  left: 8%;
 }
 
 .section__head-title {

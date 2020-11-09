@@ -24,7 +24,7 @@
 
   @include phones {
     justify-content: center;
-    margin-bottom: rem(-26px);
+    margin-left: rem(-20px);
   }
 }
 
@@ -46,4 +46,8 @@
 .call__logo-pic.logo__footer {
   fill: #497870;
   align-self: center;
+  
+  @include phones {
+    margin-top: 4px;
+  }
 }

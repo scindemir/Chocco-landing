@@ -2,12 +2,14 @@
   background: url("../img/png/pattern.png");
   color: $darkGreen;
   position: relative;
+  z-index: 0;
 
   &:before {
     content: url("../img/png/berry7.png");
     position: absolute;
     top: -17%;
     right: 0;
+    z-index: -10;
   }
 
   &:after {
@@ -15,6 +17,7 @@
     position: absolute;
     top: 80%;
     left: 8%;
+    z-index: 10;
   }
 
 }
@@ -23,7 +26,7 @@
   color: $darkGreen;
 }
 
-.order__form-right {
+.form__col-right {
   position: relative;
 
   &:after {

@@ -1,5 +1,9 @@
 .footer__social {
   margin-top: rem(46px);
+
+  @include phones {
+    margin-top: rem(16px);
+  }
 }
 
 .social__item {

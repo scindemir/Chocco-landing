@@ -8,6 +8,7 @@
   text-decoration: none;
   letter-spacing: rem(0.3px);
   border: none;
+  z-index: 80;
 
   &--theme--white {
     color: $darkGreen;
@@ -19,7 +20,7 @@
     }
   }
 
-  &--theme--green {
+  &__theme--green {
     color: #fff;
     background: $darkGreen;
 
@@ -29,7 +30,7 @@
     }
   }
 
-  &--theme--transparent {
+  &__theme--transparent {
     background: transparent;
     color: #292929;
     text-transform: none;

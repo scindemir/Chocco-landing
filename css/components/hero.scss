@@ -16,6 +16,7 @@
     content: url("../img/png/leaf3.png");
     bottom: rem(-40px);
     left: 2%;
+    z-index: 91;
   }
 
   &:after {
@@ -39,6 +40,7 @@
   height: 100%;
   padding: rem(24px) 0 rem(46px);
   background: url("../img/png/chocs.png") right center / 50% auto no-repeat;
+  z-index: 88;
 
   @include tablets {
     background: none;
@@ -80,6 +82,7 @@
   line-height: 1.1;
   text-transform: uppercase;
   margin-bottom: rem(16px);
+  z-index: 10;
 
   @include tablets {
     padding: 0 5%;

@@ -1,21 +1,28 @@
 .about__item {
   text-align: center;
+  flex:1;
+  position: relative;
+
+  @include phones {
+    padding: 0;
+    display: flex;
+  }
 }
 
 .benefits__pic {
   display: inline-block;
   position: relative;
-  width: 128px;
-  height: 128px;
+  width: rem(128px);
+  height: rem(128px);
   background: #F2F5F4;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
 }
 
 .benefits__pic-icon {
-  height: 64px;
-  width: 64px;
+  height: rem(64px);
+  width: rem(64px);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -24,10 +31,10 @@
 
 .benefits__title {
   font-weight: bold;
-  font-size: 27px;
-  line-height: 32px;
+  font-size: rem(27px);
+  line-height: rem(32px);
   color: #292929;
-  margin-bottom: 14px;
+  margin-bottom: rem(14px);
 }
 
 .benefits {
@@ -36,16 +43,38 @@
 
 .section__head {
   margin-bottom: 5%;
+
+  @include tablets {
+    margin-top: 0;
+  }
 }
 
 .section__about {
   position: relative;
   background: url("../img/png/leaf-ornament.png") left bottom 50% no-repeat;
 
+  @include tablets {
+    background-position: left bottom 100%;
+  }
+
+  @include phones {
+    background: none;
+  }
+
   &:before {
     content: url("../img/png/berry3.png");
     position: absolute;
-    bottom: -80px;
+    bottom: rem(-80px);
     left: 0;
+
+    @include phones {
+      display: none;
+    }
+  }
+}
+
+.section__head-text {
+  @include tablets {
+    margin-bottom: rem(52px);
   }
 }

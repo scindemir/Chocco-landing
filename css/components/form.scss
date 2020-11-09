@@ -1,24 +1,42 @@
 .form {
   display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    padding: 0 18%;
+  }
+
+  @include phones {
+    padding: 0 2%;
+  }
 }
 
 .form__col {
   flex:1;
-  margin-right: 20px;
+  margin-right: rem(20px);
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @include tablets {
+    margin-right: 0;
+    margin-bottom: rem(10px);
   }
 }
 
 .form__row {
   display: flex;
-  margin-bottom: 18px;
+  margin-bottom: rem(18px);
+
+  @include phones {
+    justify-content: center;
+  }
 }
 
 .form__block {
   flex: 1;
-  margin-right: 20px;
+  margin-right: rem(20px);
 
   &:last-child {
     margin-right: 0;
@@ -27,8 +45,8 @@
 
 .form__input {
   width: 100%;
-  border: solid 3px transparent;
-  padding: 18px 12px;
+  border: solid rem(3px) transparent;
+  padding: rem(18px) rem(12px);
   border-radius: 4px;
   outline: none;
 
@@ -37,9 +55,17 @@
   }
 
   &--textarea {
-    min-height: 180px;
+    min-height: rem(180px);
     width: 100%;
     resize: none;
+
+    @include tablets {
+      min-height: rem(82px);
+    }
+  }
+
+  @include tablets {
+    padding: rem(10px) rem(8px);
   }
 }
 
@@ -51,18 +77,29 @@
 
 .form__elem {
   display: inline-flex;
-  margin-right: 20px;
+  margin-right: rem(20px);
 
   &:last-child {
     margin-right: 0;
   }
   
+  @include tablets {
+    margin-top: 4px;
+  }
 }
 
 .form__button {
   display: flex;
 }
 
+.form__btns{
+  display: flex;
+
+  @include tablets {
+    justify-content: center;
+  }
+}
+
 .radio--checkbox {
-  margin-bottom: 12px;
+  margin-bottom: rem(12px);
 }

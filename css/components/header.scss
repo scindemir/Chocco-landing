@@ -2,38 +2,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 14px;
-  margin-bottom: 32px;
-}
+  padding-top: rem(14px);
+  margin-bottom: rem(32px);
 
-.menu__list {
-  display: flex;
-  align-items: center;
-}
-
-.menu__link {
-  text-decoration: none;
-  font-weight: 400;
-}
-
-.menu__item {
-  margin-right: 26px;
-
-  &:last-child {
-    margin-right: 0;
+  @include tablets {
+    padding-top: 0;
   }
 }
 
-.call {
-  font-size: 24px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  font-weight: 400;
-}
 
-.call__logo-pic {
-  width: 13px;
-  height: 13px;
-  margin-right: 6px;
+.call.header__phone-number {
+  @include tablets {
+    display: none;
+  }
 }

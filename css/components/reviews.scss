@@ -1,16 +1,42 @@
 .reviews__display {
+  background: url("../img/png/layerwithleaves.png") right top no-repeat;
+  padding: rem(50px) rem(44px) rem(34px);
   background-color: #F8FAF9;
-  background: url("../img/png/review-ornament.png") right top;
-  padding: 50px 44px 34px;
+  overflow: hidden;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    width: rem(90px);
+    height: rem(90px);
+    background: #fff;
+    border-radius: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: rem(-65px);
+  }
 }
 
 .reviews__display-inner {
   display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 }
 
 .reviews__avatar {
-  width: 254px;
-  height: 264px;
+  width: rem(254px);
+  height: rem(264px);
+
+  @include tablets {
+    width: rem(130px);
+    height: rem(132px);
+  }
 }
 
 .reviews__avatar-img {
@@ -21,31 +47,37 @@
 
 .reviews__content {
   flex: 1;
-  margin-left: 20px;
+  margin-left: rem(20px);
   padding-right: 16%;
+
+  @include tablets {
+    padding-right: 0;
+    margin-left: 0;
+    margin-top: rem(20px);
+  }
 
 }
 
 .reviews__content-title {
   font-weight: bold;
-  font-size: 27px;
+  font-size: rem(27px);
   color: #292929;
 }
 
 .reviews__content-text {
-  margin-bottom: 20px;
-  line-height: 22px;
+  margin-bottom: rem(20px);
+  line-height: rem(22px);
 }
 
 .reviews__content-name {
   font-weight: 500;
-  font-size: 18px;
+  font-size: rem(18px);
   color: #292929;
 }
 
 .interactive-avatar--pic {
-  width: 74px;
-  height: 74px;
+  width: rem(74px);
+  height: rem(74px);
 }
 
 .section__head {
@@ -55,13 +87,17 @@
 .reviews__switcher {
   display: flex;
   justify-content: center;
-  margin-top: 14px;
+  margin-top: rem(14px);
 
   &:after {
     content: url("../img/png/berry5.png");
     position: absolute;
-    bottom: -150px;
-    left: -78px;
+    bottom: rem(-150px);
+    left: rem(-78px);
+  }
+
+  @include tablets {
+    margin-top: rem(32px);
   }
 }
 
@@ -72,13 +108,13 @@
     content: url("../img/png/berry4.png");
     position: absolute;
     top: 8%;
-    right: 0px;
+    right: 0;
   }
 
   &:before {
     content: url("../img/png/ornament.png");
     position: absolute;
     bottom: -28%;
-    left: 0px;
+    left: 0;
   }
 }

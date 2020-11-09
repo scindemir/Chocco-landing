@@ -1,33 +1,49 @@
 .footer {
   position: relative;
   bottom: 0;
-  height: 95px;
+  height: rem(95px);
   display: flex;
   justify-content: space-between;
+
+  @include phones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .call__number-footer {
   color: $darkGreen;
   text-decoration: none;
   font-style: normal;
-  letter-spacing: 1px;
+  letter-spacing: rem(1px);
 }
 
 .footer__phone {
   display: flex;
+
+  @include phones {
+    justify-content: center;
+    margin-bottom: rem(-26px);
+  }
 }
 
 .footer__address {
   color: #292929;
-  font-size: 21px;
-  line-height: 24px;
-  padding-top: 22px;
-  margin-bottom: 4px;
+  font-size: rem(21px);
+  line-height: rem(24px);
+  padding-top: rem(22px);
+  margin-bottom: rem(4px);
 }
 
 .call__logo {
-  width: 12px;
-  height: 12px;
-  margin-right: 7px;
+  width: rem(12px);
+  height: rem(12px);
+  margin-right: rem(7px);
+  align-self: flex-start;
+}
+
+.call__logo-pic.logo__footer {
+  fill: #497870;
   align-self: center;
 }

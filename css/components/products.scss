@@ -8,13 +8,14 @@
   &:after {
     content: url("./img/png/berries.png");
     position: absolute;
-    bottom: rem(-150px);
-    left: rem(-78px);
+    bottom: rem(0px);
+    left: rem(0px);
   }
 }
 
 .products-slider {
   display: flex;
+  margin-bottom: rem(90px);
 
   &__arrow {
     position: absolute;

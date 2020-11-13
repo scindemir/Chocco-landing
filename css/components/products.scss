@@ -35,5 +35,9 @@
       transform: rotate(45deg);
     }
   }
+
+  @include tablets {
+    justify-content: center;
+  }
 }
 

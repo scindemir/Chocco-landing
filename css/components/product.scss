@@ -1,0 +1,144 @@
+.product__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.product__photo {
+  width: rem(544px);
+  height: rem(470px);
+  position: relative;
+  right: 5%;
+
+  &-pic {
+    position: absolute;
+    top: 10%;
+  }
+}
+
+.product__content {
+  flex: 1;
+
+  &--hover--icon {
+    background-color: #86C3D7;
+    width: rem(90px);
+    height: rem(90px);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-bottom: rem(26px);
+  }
+}
+
+.composition--hover {
+  fill: #ffffff;
+  width: rem(46px);
+  height: rem(46px);
+}
+
+.product__content--hover--composition--list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 0px;
+  width: rem(272px);
+  height: rem(344px);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(40px);
+  border-radius: 4px;
+  right: 9999px;
+  opacity: 0;
+  transition: opacity .4s;
+  z-index: 99;
+}
+
+.product__content--hover {
+
+  &:hover .product__content--hover--composition--list {
+    right: rem(34px);
+    opacity: 1;
+  }
+  
+}
+
+.composition--icon {
+  fill: #000000;
+  width: rem(32px);
+  height: rem(32px);
+  margin-right: rem(10px);
+}
+
+.product__content--hover--composition--item {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  color: #000000;
+  width: rem(246px);
+  height: rem(44px);
+ // padding: rem(18px) rem(14px);
+  margin-top: rem(18px);
+}
+
+
+.product__content--hover--composition--item-gramm {
+  text-align: right;
+}
+
+.product__content {
+  flex: 1;
+
+  &-title {
+    font-weight: bold;
+    font-size: rem(36px);
+    line-height: rem(43px);
+    color: #292929;
+    text-transform: uppercase;
+    margin-bottom: rem(14px);
+    width: rem(368px);
+  }
+
+  &-text {
+    color: #666666;
+    font-weight: 400;
+    line-height: rem(22px);
+    width: rem(368px);
+  }
+}
+
+.product__content-feature--row {
+  display: flex;
+  flex-direction: row;
+  margin-top: rem(34px);
+
+  &--col {
+    flex-direction: column;
+    margin-right: rem(50px);
+
+    &--top {
+      color: #666666;
+      font-weight: normal;
+      font-size: rem(18px);
+      line-height: rem(22px);
+    }
+
+    &--bottom {
+      color: #000000;
+      font-weight: bold;
+      font-size: rem(18px);
+      line-height: rem(22px);
+    }
+  }
+
+  &--price {
+    color: #151515;
+    font-weight: 300;
+    font-size: rem(60px);
+    line-height: rem(60px);
+    margin-right: rem(30px);
+  }
+}
+

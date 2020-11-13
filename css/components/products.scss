@@ -1,0 +1,39 @@
+.section__products {
+  background: url("./img/png/backgrProd.png") right bottom no-repeat;
+  background-color: #F8FAF9;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &:after {
+    content: url("./img/png/berries.png");
+    position: absolute;
+    bottom: rem(-150px);
+    left: rem(-78px);
+  }
+}
+
+.products-slider {
+  display: flex;
+
+  &__arrow {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    z-index:100;
+
+    &--direction-prev {
+      transform: rotate(-135deg);
+    }
+
+    &--direction-next {
+      transform: rotate(45deg);
+    }
+  }
+}
+

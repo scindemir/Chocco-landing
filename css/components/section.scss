@@ -1,15 +1,15 @@
 .section {
   height: 100vh;
-  min-height: rem(750px);
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   @include tablets {
-    padding-bottom: 5%;
+    min-height: 816px;
   }
+
   @include phones {
-    padding-bottom: 5%;
+    min-height: 816px;
   }
 }
 

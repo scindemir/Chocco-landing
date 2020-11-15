@@ -132,20 +132,18 @@
 
 .btn-close {
   z-index: 150;
-  width: 30px;
+  width: 20px;
   height: 20px;
-  color: #fff;
+  fill: #fff;
   position: absolute;
-  
-  font-size: 28px;
 
   @include tablets {
-    right: 10px;
-    top: 26px;
+    right: 20px;
+    top: 30px;
   }
 
   @include phones {
-    top: 18px;
-    right: 2px;
+    top: 28px;
+    right: 12px;
   }
 }

@@ -94,6 +94,11 @@
     position: absolute;
     bottom: rem(-150px);
     left: rem(-78px);
+
+    @include phones {
+      width: 136px;
+      height: 78px;
+    }
   }
 
   @include tablets {

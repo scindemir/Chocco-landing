@@ -145,8 +145,7 @@
           <div class="products-slider">
             <div class="products-slider__arrows">
               <a href="#" class="product-slider__arrow product-slider__arrow--direction-prev"></a>
-              <a href="#" class="product-slider__arrow product-slider__arrow--direction-next"></a>
-              <ul class="products">
+                <ul class="products">
                   <li class="products__item product">
                     <div class="product__container">
                       <div class="product__photo">
@@ -247,6 +246,7 @@
                     </div>
                   </li>
                 </ul>
+              <a href="#" class="product-slider__arrow product-slider__arrow--direction-next"></a>
             </div>
             
           </div>
@@ -431,7 +431,9 @@
 
 <div class="overlay" id="overlay">
   <div class="button_container" id="close">
-        <span class="btn-close">X</span>
+    <svg class="btn-close">
+      <use xlink:href="./img/sprite/sprite.svg#close"></use>
+    </svg>
     </div>
   <nav class="hamburger__menu hamburger__menu--active body-active-menu">
     <ul class="hamburger__menu-list">

@@ -17,6 +17,10 @@
     bottom: rem(-40px);
     left: 2%;
     z-index: 91;
+
+    @include tablets {
+      display: none;
+    }
   }
 
   &:after {
@@ -24,6 +28,10 @@
     content: url("../img/png/hero-berries.png");
     bottom: rem(-68px);
     right: 8%;
+
+    @include tablets {
+      display: none;
+    }
   }
 
   &:before, &:after {
@@ -43,7 +51,7 @@
   z-index: 88;
 
   @include tablets {
-    background: none;
+    background: none;    ;
   }
 }
 
@@ -64,7 +72,7 @@
       position: absolute;
       width: rem(350px);
       height: rem(366px);
-      top: 12%;
+      top: 16%;
       background: url("../img/png/comp.png")center center / contain no-repeat;
 
       @include phones {

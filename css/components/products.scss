@@ -13,6 +13,11 @@
     @include tablets {
       bottom: -14%;
     }
+
+    @include phones {
+      width: 152px;
+      height: 350px;
+    }
   }
 
   &:after {
@@ -23,6 +28,12 @@
 
     @include tablets {
       bottom: 0;
+      right: 1%;
+    }
+
+    @include phones {
+      width: 104px;
+      height: 86px;
     }
   }
 

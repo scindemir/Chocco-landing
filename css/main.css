@@ -102,11 +102,21 @@ img {
   left: 2%;
   z-index: 91;
 }
+@media screen and (max-width: 768px) {
+  .hero:before {
+    display: none;
+  }
+}
 .hero:after {
   position: absolute;
   content: url("../img/png/hero-berries.png");
   bottom: -3.7777777778rem;
   right: 8%;
+}
+@media screen and (max-width: 768px) {
+  .hero:after {
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) {
   .hero:before, .hero:after {
@@ -147,7 +157,7 @@ img {
     position: absolute;
     width: 19.4444444444rem;
     height: 20.3333333333rem;
-    top: 12%;
+    top: 16%;
     background: url("../img/png/comp.png") center center/contain no-repeat;
   }
 }
@@ -238,6 +248,12 @@ img {
     bottom: -14%;
   }
 }
+@media screen and (max-width: 480px) {
+  .section__products:before {
+    width: 152px;
+    height: 350px;
+  }
+}
 .section__products:after {
   content: url("../img/png/berries.png");
   position: absolute;
@@ -247,6 +263,13 @@ img {
 @media screen and (max-width: 768px) {
   .section__products:after {
     bottom: 0;
+    right: 1%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .section__products:after {
+    width: 104px;
+    height: 86px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -586,19 +609,18 @@ img {
 
 .section {
   height: 100vh;
-  min-height: 41.6666666667rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
   .section {
-    padding-bottom: 5%;
+    min-height: 816px;
   }
 }
 @media screen and (max-width: 480px) {
   .section {
-    padding-bottom: 5%;
+    min-height: 816px;
   }
 }
 
@@ -878,6 +900,12 @@ img {
   bottom: -8.3333333333rem;
   left: -4.3333333333rem;
 }
+@media screen and (max-width: 480px) {
+  .reviews__switcher:after {
+    width: 136px;
+    height: 78px;
+  }
+}
 @media screen and (max-width: 768px) {
   .reviews__switcher {
     margin-top: 1.7777777778rem;
@@ -958,6 +986,11 @@ img {
   left: 8%;
   z-index: 10;
 }
+@media screen and (max-width: 768px) {
+  .section__order:after {
+    display: none;
+  }
+}
 
 .section__head-title {
   color: #0b4d3c;
@@ -971,6 +1004,11 @@ img {
   position: absolute;
   top: 48%;
   right: -16%;
+}
+@media screen and (max-width: 768px) {
+  .form__col-right:after {
+    display: none;
+  }
 }
 
 .form {
@@ -1446,21 +1484,20 @@ img {
 }
 .btn-close {
   z-index: 150;
-  width: 30px;
+  width: 20px;
   height: 20px;
-  color: #fff;
+  fill: #fff;
   position: absolute;
-  font-size: 28px;
 }
 @media screen and (max-width: 768px) {
   .btn-close {
-    right: 10px;
-    top: 26px;
+    right: 20px;
+    top: 30px;
   }
 }
 @media screen and (max-width: 480px) {
   .btn-close {
-    top: 18px;
-    right: 2px;
+    top: 28px;
+    right: 12px;
   }
 }

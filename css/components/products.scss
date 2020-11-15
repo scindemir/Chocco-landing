@@ -1,43 +1,91 @@
 .section__products {
-  background: url("./img/png/backgrProd.png") right bottom no-repeat;
   background-color: #F8FAF9;
   position: relative;
   display: flex;
   justify-content: center;
 
-  &:after {
-    content: url("./img/png/berries.png");
+  &:before {
+    content: url("../img/png/backgrProd.png");
     position: absolute;
-    bottom: rem(0px);
-    left: rem(0px);
+    right: 0;
+    bottom: -25%;
+
+    @include tablets {
+      bottom: -14%;
+    }
+  }
+
+  &:after {
+    content: url("../img/png/berries.png");
+    position: absolute;
+    bottom: -7%;
+    right: 7%;
+
+    @include tablets {
+      bottom: 0;
+    }
+  }
+
+  @include phones {
+    padding-bottom: 10%;
   }
 }
 
-.products-slider {
+.product-slider {
   display: flex;
   margin-bottom: rem(90px);
 
   &__arrow {
     position: absolute;
-    top: 5%;
-    left: 3%;
+    top: 53%;
     display: inline-block;
-    width: 150px;
-    height: 150px;
+    width: rem(20px);
+    height: rem(20px);
     border-top: 2px solid #000;
     border-right: 2px solid #000;
     z-index:100;
+    border-radius: 3px;
+
+    @include tablets {
+      top: 32%;
+    }
+
+    @include phones {
+      top: 22%;
+    }
 
     &--direction-prev {
       transform: rotate(-135deg);
+      left: -2%;
+
+      @include tablets {
+        left: 16%;
+      }
+
+      @include phones {
+        left: 3px;
+      }
     }
 
     &--direction-next {
       transform: rotate(45deg);
+      right: -3%;
+
+      @include tablets {
+        right: 16%;
+      }
+
+      @include phones {
+        right: 3px;
+      }
     }
   }
 
   @include tablets {
+    justify-content: center;
+  }
+
+  @include phones {
     justify-content: center;
   }
 }

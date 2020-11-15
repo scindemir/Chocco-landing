@@ -136,7 +136,16 @@
   height: 20px;
   color: #fff;
   position: absolute;
-  top: 18px;
-  right: 10px;
-  font-size: 36px;
+  
+  font-size: 28px;
+
+  @include tablets {
+    right: 10px;
+    top: 26px;
+  }
+
+  @include phones {
+    top: 18px;
+    right: 2px;
+  }
 }

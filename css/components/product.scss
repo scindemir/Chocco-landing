@@ -15,9 +15,29 @@
   position: relative;
   right: 5%;
 
+  @include tablets {
+    display: block;
+    align-self: center;
+    right: 3%;
+  }
+
+  @include phones {
+    display: contents;
+  }
+
   &-pic {
     position: absolute;
     top: 10%;
+
+    @include tablets {
+      position: relative;
+    }
+
+    @include phones {
+      position: relative;
+      display: block;
+      padding-right: 5%;
+    }
   }
 }
 

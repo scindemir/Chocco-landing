@@ -104,6 +104,11 @@
     padding: 0 24%;
     margin-bottom: rem(34px);
   }
+
+  @media (max-width: 480px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .hero__icons {

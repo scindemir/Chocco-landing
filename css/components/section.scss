@@ -1,14 +1,24 @@
 .section {
   height: 100vh;
-  min-height: rem(650px);
+  min-height: rem(750px);
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @include tablets {
+    padding-bottom: 5%;
+  }
+  @include phones {
+    padding-bottom: 5%;
+  }
 }
 
 .section__head {
   text-align: center;
-  margin-top: rem(20px);
+  
+  @include phones {
+    margin-top: 4%;
+  }
 }
 
 .section__head-title {
@@ -19,16 +29,23 @@
   color: #292929;
   margin-bottom: rem(6px);
   z-index: 90;
+
+  @media (max-width: 480px) {
+    padding-top: 2%;
+  }
 }
 
 .section__head-text {
-  padding: 0 26%;
+  padding-left: 26%;
+  padding-right: 26%;
 
   @include tablets {
-    padding: 0 20%;
+    padding-left: 20%;
+    padding-right: 20%;
   }
 
   @include phones {
-    padding: 0 5%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }

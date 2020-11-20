@@ -744,12 +744,12 @@ img {
 @media screen and (max-width: 768px) {
   .team__content-block {
     width: 14.4444444444rem;
-    height: 24rem;
+    height: 22.2222222222rem;
   }
 }
 @media screen and (max-width: 480px) {
   .team__content-block {
-    height: 17.2222222222rem;
+    height: 15.5555555556rem;
   }
 }
 

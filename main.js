@@ -95,6 +95,7 @@ $('.team__title').on('click', (e) => {
   if(elemContainer.hasClass('active')) {
     closeEveryItem(container);
   } else {
+    closeEveryItem(container);
     openItem($this);
   }
 })

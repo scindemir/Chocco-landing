@@ -145,11 +145,11 @@
 
     @include tablets {
     width: rem(260px);
-    height: rem(432px);
+    height: rem(400px);
     }
 
     @include phones {
-      height: rem(310px);
+      height: rem(280px);
     }
 
   }

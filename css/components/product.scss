@@ -75,7 +75,7 @@
   position: absolute;
   top: 0px;
   width: rem(272px);
-  height: rem(344px);
+  min-height: rem(344px);
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(40px);

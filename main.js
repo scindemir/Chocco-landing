@@ -26,13 +26,22 @@ let menuOpenBurger = (function (buttonClass, menuClass) {
 
 })('#toggle', '#overlay', '#close');
 
-console.log(menuOpenBurger);
 menuOpenBurger.open();
 
 //product slider
-$('.products-slider').bxSlider({
+const slider = $('.products-slider').bxSlider({
   pager: false,
   controls: false
+  });
+
+  $('.product-slider__arrow--direction-prev').click((e) => {
+    e.preventDefault();
+    slider.goToPrevSlide();
+  });
+
+  $('.product-slider__arrow--direction-next').click((e) => {
+    e.preventDefault();
+    slider.goToNextSlide();
   });
 
 

@@ -212,6 +212,64 @@ img {
   }
 }
 
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .section {
+    min-height: 816px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .section {
+    min-height: 816px;
+  }
+}
+
+.section__head {
+  text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .section__head {
+    margin-top: 4%;
+  }
+}
+
+.section__head-title {
+  font-weight: bold;
+  font-size: 2.6666666667rem;
+  line-height: 3.2222222222rem;
+  text-transform: uppercase;
+  color: #292929;
+  margin-bottom: 0.3333333333rem;
+  z-index: 90;
+}
+@media (max-width: 480px) {
+  .section__head-title {
+    padding-top: 2%;
+  }
+}
+
+.section__head-text {
+  padding-left: 26%;
+  padding-right: 26%;
+}
+@media screen and (max-width: 768px) {
+  .section__head-text {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .section__head-text {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -276,6 +334,13 @@ img {
   .section__products {
     padding-bottom: 10%;
   }
+}
+
+.bx-wrapper {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  -webkit-box-shadow: 0;
 }
 
 .product-slider {
@@ -539,6 +604,164 @@ img {
   margin-right: 1.6666666667rem;
 }
 
+.mobile-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.team--version--desktop {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-flex: 1;
+  justify-content: space-between;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .team--version--desktop {
+    display: none;
+  }
+}
+.team--version--mobile {
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+@media screen and (max-width: 768px) {
+  .team--version--mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30.8333333333rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team--version--mobile {
+    justify-content: space-evenly;
+    margin-bottom: 9.4444444444rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section__head .section__head--team {
+    margin-top: 25%;
+  }
+}
+
+.section__head-title.section__head-title--team {
+  color: #292929;
+  margin-bottom: 2.9444444444rem;
+}
+
+.team__item {
+  width: 12.3333333333rem;
+  height: 25.2222222222rem;
+  position: relative;
+  margin-right: 1.1111111111rem;
+}
+.team__item:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  .team__item {
+    text-align: center;
+    width: 14.4444444444rem;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .team__item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.team__member {
+  margin-bottom: 1.1111111111rem;
+  width: 12.3333333333rem;
+  height: 16.1111111111rem;
+}
+@media screen and (max-width: 768px) {
+  .team__member {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__member {
+    width: 7.6666666667rem;
+    height: 10rem;
+  }
+}
+.team__member-photo {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  margin-top: 0.3333333333rem;
+}
+
+.team__title {
+  border: none;
+  background: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.1666666667rem;
+  padding: 0;
+  vertical-align: middle;
+  margin-bottom: 0.4444444444rem;
+}
+
+.team__content-text--title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.2222222222rem;
+  margin-bottom: 0.2222222222rem;
+  color: #000000;
+}
+@media screen and (max-width: 768px) {
+  .team__content-text--title {
+    font-weight: bold;
+    color: #000000;
+    margin-top: 0.7777777778rem;
+  }
+}
+.team__content-text--description {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.2222222222rem;
+}
+@media screen and (max-width: 768px) {
+  .team__content-text--description {
+    margin-bottom: 1.7777777778rem;
+  }
+}
+
+.team__content {
+  overflow: hidden;
+  transition: height 0.3s;
+  height: 0;
+}
+.team__content-block {
+  height: 24rem;
+}
+@media screen and (max-width: 768px) {
+  .team__content-block {
+    width: 14.4444444444rem;
+    height: 24rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__content-block {
+    height: 17.2222222222rem;
+  }
+}
+
+.section .section__team {
+  min-height: 36.2222222222rem;
+}
+@media screen and (max-width: 768px) {
+  .section .section__team {
+    display: list-item;
+  }
+}
+
 .features {
   display: flex;
 }
@@ -605,64 +828,6 @@ img {
 }
 .btn__theme--transparent:hover {
   color: #0b4d3c;
-}
-
-.section {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-@media screen and (max-width: 768px) {
-  .section {
-    min-height: 816px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .section {
-    min-height: 816px;
-  }
-}
-
-.section__head {
-  text-align: center;
-}
-@media screen and (max-width: 480px) {
-  .section__head {
-    margin-top: 4%;
-  }
-}
-
-.section__head-title {
-  font-weight: bold;
-  font-size: 2.6666666667rem;
-  line-height: 3.2222222222rem;
-  text-transform: uppercase;
-  color: #292929;
-  margin-bottom: 0.3333333333rem;
-  z-index: 90;
-}
-@media (max-width: 480px) {
-  .section__head-title {
-    padding-top: 2%;
-  }
-}
-
-.section__head-text {
-  padding-left: 26%;
-  padding-right: 26%;
-}
-@media screen and (max-width: 768px) {
-  .section__head-text {
-    padding-left: 20%;
-    padding-right: 20%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .section__head-text {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
 }
 
 .benefits {
@@ -833,6 +998,20 @@ img {
   }
 }
 
+.reviews__list {
+  position: relative;
+  min-height: 15.5555555556rem;
+}
+
+.reviews__item {
+  opacity: 0;
+  position: absolute;
+}
+.reviews__item.active {
+  opacity: 1;
+  position: static;
+}
+
 .reviews__avatar {
   width: 14.1111111111rem;
   height: 14.6666666667rem;
@@ -893,6 +1072,9 @@ img {
   display: flex;
   justify-content: center;
   margin-top: 0.7777777778rem;
+}
+.reviews__switcher-item:hover {
+  border-color: #0b4d3c;
 }
 .reviews__switcher:after {
   content: url("../img/png/berry5.png");
@@ -1498,6 +1680,6 @@ img {
 @media screen and (max-width: 480px) {
   .btn-close {
     top: 28px;
-    right: 12px;
+    right: 10px;
   }
 }

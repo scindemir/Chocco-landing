@@ -1,0 +1,165 @@
+.mobile-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+
+.team {
+  &--version--desktop {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-flex: 1;
+    justify-content: space-between;
+    text-align: center;
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &--version--mobile {
+    display: none;
+    position: absolute;
+    top: 100%;
+  
+
+    @include tablets {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: rem(555px);
+    }
+
+    @include phones {
+      justify-content: space-evenly;
+      margin-bottom: rem(170px);
+    }
+  }
+}
+
+.section__head .section__head--team{
+  @include tablets {
+    margin-top: 25%;
+  }
+}
+
+.section__head-title.section__head-title--team {
+  color: #292929;
+  margin-bottom: rem(53px);
+}
+
+.team__item {
+  width: rem(222px);
+  height: rem(454px);
+  position: relative;
+  margin-right: rem(20px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    text-align: center;
+    width: rem(260px);
+    margin-right: 0;
+    margin-bottom: 10px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+
+
+.team__member {
+  margin-bottom: rem(20px);
+  width: rem(222px);
+  height: rem(290px);
+
+  @include tablets {
+    margin: 0 auto;
+  }
+
+  @include phones {
+    width: rem(138px);
+    height: rem(180px);
+  }
+
+  &-photo {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin-top: rem(6px);
+
+  }
+}
+
+.team__title {
+  border: none; 
+  background: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: rem(21px);
+  padding: 0;
+  vertical-align: middle;
+  margin-bottom: rem(8px);
+}
+
+.team__content-text {
+  
+  &--title{
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(18px);
+    line-height: rem(22px);
+    margin-bottom: rem(4px);
+    color: #000000;
+
+    @include tablets {
+      font-weight: bold;
+      color: #000000;
+      margin-top: rem(14px);
+    }
+  }
+
+  &--description {
+    font-weight: 300;
+    font-size: rem(18px);
+    line-height: rem(22px);
+
+    @include tablets {
+      margin-bottom: rem(32px);
+    }
+  }
+}
+
+.team__content {
+  overflow: hidden;
+  transition: height .3s;
+  height: 0;
+
+  &-block {
+    height: rem(432px);
+
+    @include tablets {
+    width: rem(260px);
+    height: rem(432px);
+    }
+
+    @include phones {
+      height: rem(310px);
+    }
+
+  }
+
+}
+
+.section .section__team {
+  min-height: rem(652px);
+
+  @include tablets {
+    display: list-item;
+  }
+}

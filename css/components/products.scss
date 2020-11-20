@@ -42,6 +42,14 @@
   }
 }
 
+.bx-wrapper {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  -webkit-box-shadow: 0;
+}
+
+
 .product-slider {
   display: flex;
   margin-bottom: rem(90px);

@@ -31,7 +31,8 @@ menuOpenBurger.open();
 
 //product slider
 $('.products-slider').bxSlider({
-  pager: false;
+  pager: false,
+  controls: false
   });
 
 
@@ -87,7 +88,5 @@ $('.team__title').on('click', (e) => {
   } else {
     openItem($this);
   }
-
-
-  
 })
+

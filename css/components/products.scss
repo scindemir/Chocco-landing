@@ -75,10 +75,10 @@
 
     &--direction-prev {
       transform: rotate(-135deg);
-      left: -2%;
+      left: 1%;
 
       @include tablets {
-        left: 16%;
+        left: 6%;
       }
 
       @include phones {
@@ -88,10 +88,10 @@
 
     &--direction-next {
       transform: rotate(45deg);
-      right: -3%;
+      right: 1%;
 
       @include tablets {
-        right: 16%;
+        right: 2%;
       }
 
       @include phones {

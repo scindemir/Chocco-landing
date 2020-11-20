@@ -370,11 +370,11 @@ img {
 }
 .product-slider__arrow--direction-prev {
   transform: rotate(-135deg);
-  left: -2%;
+  left: 1%;
 }
 @media screen and (max-width: 768px) {
   .product-slider__arrow--direction-prev {
-    left: 16%;
+    left: 6%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -384,11 +384,11 @@ img {
 }
 .product-slider__arrow--direction-next {
   transform: rotate(45deg);
-  right: -3%;
+  right: 1%;
 }
 @media screen and (max-width: 768px) {
   .product-slider__arrow--direction-next {
-    right: 16%;
+    right: 2%;
   }
 }
 @media screen and (max-width: 480px) {

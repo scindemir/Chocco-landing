@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chocco - натуральные шоколадные батончики</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
   <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -589,39 +590,40 @@
             <h2 class="section__head-title">закажите доставку</h2>
           </div>
           <form action="" class="form">
+            <input type="hidden" name="to" value="blah@gmail.com">
             <div class="form__col form__col-left">
               <div class="form__row">
                 <label class="form__block" for="name">
                   <div class="form__title">Имя</div>
-                  <input type="text" id="name" class="form__input">
+                  <input type="text" name="name" id="name" class="form__input">
                 </label>
                 <label class="form__block" for="phone">
                   <div class="form__title">Телефон</div>
-                  <input type="text" id="phone" class="form__input">
+                  <input type="text" name="phone" id="phone" class="form__input">
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__block" for="street">
                   <div class="form__title">Улица</div>
-                  <input type="text" id="street" class="form__input">
+                  <input type="text" name="street" id="street" class="form__input">
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__block" for="house">
                   <div class="form__title">Дом</div>
-                  <input type="text" id="house" class="form__input">
+                  <input type="text" name="house" id="house" class="form__input">
                 </label>
                 <label class="form__block" for="block">
                   <div class="form__title">Корпус</div>
-                  <input type="text" id="block" class="form__input">
+                  <input type="text" name="block" id="block" class="form__input">
                 </label>
                 <label class="form__block" for="apt">
                   <div class="form__title">Квартира</div>
-                  <input type="text" id="apt" class="form__input">
+                  <input type="text" name="apt" id="apt" class="form__input">
                 </label>
                 <label class="form__block" for="floor">
                   <div class="form__title">Этаж</div>
-                  <input type="text" id="floor" class="form__input">
+                  <input type="text" name="floor" id="floor" class="form__input">
                 </label>
               </div>
             </div>
@@ -629,7 +631,7 @@
               <div class="form__row">
                 <label class="form__block" for="comment">
                   <div class="form__title">Комментарий</div>
-                  <textarea type="text" id="comment" class="form__input form__input--textarea"></textarea>
+                  <textarea type="text" name="comment" id="comment" class="form__input form__input--textarea"></textarea>
                 </label>
               </div>
               <div class="form__row form__controls">
@@ -662,6 +664,17 @@
           </form>
         </div>
       </section>
+      <div id="modal" class="modal">
+        <div class="modal__container">
+          <div class="modal__content">
+            Cообщение отправлено
+          </div>
+          <div class="modal__button-container">
+            <a href="#" class="btn app-close-modal btn__theme--green">Закрыть</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </main>
 </div>
@@ -762,6 +775,7 @@
   </nav>
  </div>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
  <script src="./main.js"></script>
 </body>

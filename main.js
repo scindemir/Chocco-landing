@@ -79,7 +79,9 @@ const openItem = item => {
 const closeEveryItem = container => {
   const items = container.find('.team__content');
   const itemContainer = container.find('.team__item');
+  const triangle = container.find('.equilateralTriangle');
 
+  triangle.removeClass('active');
   itemContainer.removeClass('active');
   items.height(0);
 }
@@ -95,10 +97,10 @@ $('.team__title').on('click', (e) => {
 
   if(elemContainer.hasClass('active')) {
     closeEveryItem(container);
-    triangle.removeClass('active');
   } else {
     closeEveryItem(container);
     openItem($this);
+    triangle.addClass('active');
   }
 })
 

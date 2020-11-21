@@ -67,7 +67,7 @@ $('.interactive-avatar__link').on('click', e => {
 // team
 $(document).ready( () => {
   $('.team__content').first().css('height', '432px');
-  $('.team__content').eq(4).css('height', '370px');
+  $('.team__content').eq(4).css('height', '300px');
 })
 
 

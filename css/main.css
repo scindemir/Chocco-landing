@@ -705,6 +705,7 @@ img {
   padding: 0;
   vertical-align: middle;
   margin-bottom: 0.4444444444rem;
+  outline: none;
 }
 
 .team__content-text--title {

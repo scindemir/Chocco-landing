@@ -90,7 +90,7 @@ $('.team__title').on('click', (e) => {
   const $this = $(e.currentTarget);
   const container = $this.closest('.team');
   const elemContainer = $this.closest('.team__item');
-  const triangle = $this.closest('.equilateralTriangle');
+  const triangle = $this.next('.equilateralTriangle');
   triangle.addClass('active');
 
   if(elemContainer.hasClass('active')) {

@@ -758,6 +758,9 @@ img {
   }
 }
 
+.section__team {
+  min-height: 400px;
+}
 @media screen and (max-width: 768px) {
   .section__team {
     display: block;

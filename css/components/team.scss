@@ -156,6 +156,7 @@
 }
 
 .section__team {
+  min-height: 400px;
 
   @include tablets {
     display: block;

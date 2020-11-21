@@ -66,8 +66,14 @@ $('.interactive-avatar__link').on('click', e => {
 
 // team
 $(document).ready( () => {
-  $('.team__content').first().css('height', '432px');
-  $('.team__content').eq(4).css('height', '300px');
+  let width = $(window).width();
+    if (width <= 480) {
+      $('.team__content').eq(4).css('height', '250px');
+    } else if (width > 480 && width <= 768) {
+      $('.team__content').eq(4).css('height', '377px');
+    } else {
+      $('.team__content').first().css('height', '432px');
+    }
 })
 
 

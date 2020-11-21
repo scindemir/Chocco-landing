@@ -296,14 +296,20 @@ img {
   justify-content: center;
 }
 .section__products:before {
-  content: url("../img/png/backgrProd.png");
+  content: "";
+  background-image: url("../img/png/backgrProd.png");
   position: absolute;
   right: 0;
   bottom: -25%;
+  width: 10.8888888889rem;
+  height: 25.1111111111rem;
 }
 @media screen and (max-width: 768px) {
   .section__products:before {
     bottom: -14%;
+    width: 8.4444444444rem;
+    height: 19.4444444444rem;
+    background-size: contain;
   }
 }
 @media screen and (max-width: 480px) {
@@ -645,7 +651,7 @@ img {
 }
 @media screen and (max-width: 768px) {
   .section__head-title.section__head-title--team {
-    margin-top: 9.7777777778rem;
+    margin-top: 11.1111111111rem;
     margin-bottom: 1.8888888889rem;
   }
 }

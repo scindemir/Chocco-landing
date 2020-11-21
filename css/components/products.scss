@@ -5,13 +5,19 @@
   justify-content: center;
 
   &:before {
-    content: url("../img/png/backgrProd.png");
+    content: "";
+    background-image: url("../img/png/backgrProd.png");
     position: absolute;
     right: 0;
     bottom: -25%;
+    width: rem(196px);
+    height: rem(452px);
 
     @include tablets {
       bottom: -14%;
+      width: rem(152px);
+      height: rem(350px);
+      background-size: contain;
     }
 
     @include phones {

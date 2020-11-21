@@ -313,13 +313,17 @@ img {
   }
 }
 .section__products:after {
-  content: url("../img/png/berries.png");
+  content: "";
+  background-image: url("../img/png/berries.png");
   position: absolute;
   bottom: -7%;
   right: 7%;
 }
 @media screen and (max-width: 768px) {
   .section__products:after {
+    background-size: contain;
+    height: 4.7777777778rem;
+    width: 5.7777777778rem;
     bottom: 0;
     right: 1%;
   }
@@ -631,25 +635,19 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 30.8333333333rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .team--version--mobile {
-    justify-content: space-evenly;
-    margin-bottom: 9.4444444444rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .section__head .section__head--team {
-    margin-top: 25%;
+    height: 16.6666666667rem;
   }
 }
 
 .section__head-title.section__head-title--team {
   color: #292929;
-  margin-bottom: 2.9444444444rem;
+  margin-bottom: 1.8333333333rem;
+}
+@media screen and (max-width: 768px) {
+  .section__head-title.section__head-title--team {
+    margin-top: 9.7777777778rem;
+    margin-bottom: 1.8888888889rem;
+  }
 }
 
 .team__item {
@@ -754,12 +752,9 @@ img {
   }
 }
 
-.section .section__team {
-  min-height: 36.2222222222rem;
-}
 @media screen and (max-width: 768px) {
-  .section .section__team {
-    display: list-item;
+  .section__team {
+    display: block;
   }
 }
 
@@ -1103,16 +1098,11 @@ img {
   border-color: #0b4d3c;
 }
 .reviews__switcher:after {
-  content: url("../img/png/berry5.png");
+  content: "";
+  background-image: url("../img/png/berry5.png");
   position: absolute;
   bottom: -8.3333333333rem;
   left: -4.3333333333rem;
-}
-@media screen and (max-width: 480px) {
-  .reviews__switcher:after {
-    width: 136px;
-    height: 78px;
-  }
 }
 @media screen and (max-width: 768px) {
   .reviews__switcher {
@@ -1124,11 +1114,20 @@ img {
   position: relative;
 }
 .section__reviews:after {
-  content: url("../img/png/berry4.png");
+  content: "";
+  background-image: url("../img/png/berry4.png");
   position: absolute;
   top: 8%;
   right: 0;
   z-index: -10;
+}
+@media screen and (max-width: 768px) {
+  .section__reviews:after {
+    width: 136px;
+    height: 78px;
+    background-size: contain;
+    top: 0;
+  }
 }
 .section__reviews:before {
   content: url("../img/png/ornament.png");
@@ -1176,15 +1175,21 @@ img {
   z-index: 0;
 }
 .section__order:before {
-  content: url("../img/png/berry7.png");
+  content: "";
+  background-image: url("../img/png/berry7.png");
   position: absolute;
   top: -17%;
   right: 0;
   z-index: -10;
+  width: 10.8888888889rem;
+  height: 14.6666666667rem;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .section__order:before {
-    transform: scale3d(-50%);
+    width: 6.1111111111rem;
+    height: 8.1111111111rem;
+    background-size: contain;
+    top: -7%;
   }
 }
 .section__order:after {

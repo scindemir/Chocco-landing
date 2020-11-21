@@ -5,14 +5,20 @@
   z-index: 0;
 
   &:before {
-    content: url("../img/png/berry7.png");
+    content: "";
+    background-image: url("../img/png/berry7.png");
     position: absolute;
     top: -17%;
     right: 0;
     z-index: -10;
+    width: rem(196px);
+    height: rem(264px);
 
-    @include phones {
-      transform: scale3d(-50%);
+    @include tablets {
+      width: rem(110px);
+      height: rem(146px);
+      background-size: contain;
+      top: -7%;
     }
   }
 

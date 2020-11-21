@@ -109,15 +109,12 @@
   }
 
   &:after {
-    content: url("../img/png/berry5.png");
+    content: "";
+    background-image: url("../img/png/berry5.png");
     position: absolute;
     bottom: rem(-150px);
     left: rem(-78px);
 
-    @include phones {
-      width: 136px;
-      height: 78px;
-    }
   }
 
   @include tablets {
@@ -129,11 +126,19 @@
   position: relative;
 
   &:after {
-    content: url("../img/png/berry4.png");
+    content: "";
+    background-image: url("../img/png/berry4.png");
     position: absolute;
     top: 8%;
     right: 0;
     z-index: -10;
+
+    @include tablets {
+      width: 136px;
+      height: 78px;
+      background-size: contain;
+      top: 0;
+    }
   }
 
   &:before {

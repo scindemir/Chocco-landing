@@ -65,6 +65,11 @@ $('.interactive-avatar__link').on('click', e => {
 })
 
 // team
+$(document).ready( () => {
+  $('.team__content').first().css('height', '432px');
+  $('.team__content').eq(4).css('height', '370px');
+})
+
 
 const openItem = item => {
   const container = item.closest('.team__item');
@@ -75,6 +80,8 @@ const openItem = item => {
   container.addClass('active');
   contentBlock.height(reqHeight);
 }
+
+
 
 const closeEveryItem = container => {
   const items = container.find('.team__content');

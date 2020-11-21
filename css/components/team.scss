@@ -27,25 +27,22 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: rem(555px);
+      height: rem(300px);
     }
 
-    @include phones {
-      justify-content: space-evenly;
-      margin-bottom: rem(170px);
-    }
   }
 }
 
-.section__head .section__head--team{
-  @include tablets {
-    margin-top: 25%;
-  }
-}
+
 
 .section__head-title.section__head-title--team {
   color: #292929;
-  margin-bottom: rem(53px);
+  margin-bottom: rem(33px);
+
+  @include tablets {
+    margin-top: rem(176px);
+    margin-bottom: rem(34px);
+  }
 }
 
 .team__item {
@@ -158,11 +155,10 @@
 
 }
 
-.section .section__team {
-  min-height: rem(652px);
+.section__team {
 
   @include tablets {
-    display: list-item;
+    display: block;
   }
 }
 

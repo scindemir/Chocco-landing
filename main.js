@@ -29,10 +29,21 @@ let menuOpenBurger = (function (buttonClass, menuClass) {
 menuOpenBurger.open();
 
 //product slider
-const slider = $('.products-slider').bxSlider({
-  pager: false,
-  controls: false
+let slider = $('.products-slider').bxSlider({
+        pager: false,
+        controls: false,
+        touchEnabled: false
+        });
+
+$(document).ready( () => {
+
+  
+  let width = $(window).width();
+    if (width <= 768) {
+      slider.touchEnabled = true;
+  }
   });
+
 
   $('.product-slider__arrow--direction-prev').click((e) => {
     e.preventDefault();
@@ -43,6 +54,7 @@ const slider = $('.products-slider').bxSlider({
     e.preventDefault();
     slider.goToNextSlide();
   });
+
 
 
 //reviews switcher

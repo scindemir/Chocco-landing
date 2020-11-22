@@ -29,20 +29,20 @@ let menuOpenBurger = (function (buttonClass, menuClass) {
 menuOpenBurger.open();
 
 //product slider
+let touchDevice = false;
+let width = $(window).width();
+    if (navigator.userAgent.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/) ) {
+      touchDevice = true;
+    }
+
 let slider = $('.products-slider').bxSlider({
         pager: false,
         controls: false,
-        touchEnabled: false
+        touchEnabled: touchDevice
         });
-
-$(document).ready( () => {
-
   
-  let width = $(window).width();
-    if (width <= 768) {
-      slider.touchEnabled = true;
-  }
-  });
+  
+ 
 
 
   $('.product-slider__arrow--direction-prev').click((e) => {

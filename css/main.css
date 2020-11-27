@@ -997,6 +997,67 @@ img {
   }
 }
 
+.products-menu-section {
+  background: url("/img/png/menuu.png") center center/cover no-repeat;
+  position: relative;
+  color: #fff;
+}
+.products-menu-section__title {
+  margin-top: -24%;
+  margin-left: 4%;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.6666666667rem;
+}
+
+.products-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+.products-menu__item {
+  display: flex;
+}
+.products-menu__title {
+  position: relative;
+  width: 5.5555555556rem;
+  text-align: center;
+}
+.products-menu__img {
+  height: 100%;
+  width: 100%;
+}
+.products-menu__text {
+  text-decoration: none;
+  transform: rotate(-90deg);
+  font-weight: bold;
+  font-size: 2.6666666667rem;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+}
+.products-menu__content {
+  background: rgba(51, 53, 55, 0.9);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  position: relative;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.7s;
+}
+.products-menu__container {
+  padding: 2.2222222222rem 4rem 2.4444444444rem 1.4444444444rem;
+}
+.products-menu__close {
+  position: absolute;
+  top: 1.1111111111rem;
+  right: 1.3333333333rem;
+  border: none;
+  fill: #fff;
+}
+
 .reviews__display {
   background: url("../img/png/layerwithleaves.png") right top no-repeat;
   padding: 2.7777777778rem 2.4444444444rem 1.8888888889rem;

@@ -1002,12 +1002,42 @@ img {
   position: relative;
   color: #fff;
 }
+.products-menu-section:before {
+  content: "";
+  background-image: url("/img/png/berrymenu.png");
+  position: absolute;
+  top: -10%;
+  left: 5%;
+  width: 5.7777777778rem;
+  height: 6.3333333333rem;
+  z-index: 80;
+}
+@media screen and (max-width: 768px) {
+  .products-menu-section:before {
+    width: 5rem;
+    height: 5.4444444444rem;
+    background-size: contain;
+    top: -7%;
+    left: 4%;
+  }
+}
 .products-menu-section__title {
-  margin-top: -24%;
-  margin-left: 4%;
+  margin-top: -27%;
+  margin-left: 10%;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 2.6666666667rem;
+}
+@media screen and (max-width: 768px) {
+  .products-menu-section__title {
+    margin-top: -95%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .products-menu-section__title {
+    margin-left: 2%;
+    margin-top: -135%;
+  }
 }
 
 .products-menu {
@@ -1022,8 +1052,13 @@ img {
 }
 .products-menu__title {
   position: relative;
-  width: 5.5555555556rem;
+  width: 5.6666666667rem;
   text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .products-menu__title {
+    max-width: 5rem;
+  }
 }
 .products-menu__img {
   height: 100%;
@@ -1031,31 +1066,41 @@ img {
 }
 .products-menu__text {
   text-decoration: none;
-  transform: rotate(-90deg);
+  transform: rotate(-90deg) translateY(-50%);
   font-weight: bold;
   font-size: 2.6666666667rem;
   position: absolute;
-  bottom: 0px;
-  display: flex;
+  top: 100%;
+  left: 50%;
+  margin-top: -30%;
+  white-space: nowrap;
+  transform-origin: 0 0;
+}
+@media screen and (max-width: 480px) {
+  .products-menu__text {
+    font-size: 40px;
+  }
 }
 .products-menu__content {
   background: rgba(51, 53, 55, 0.9);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   position: relative;
   width: 0;
   overflow: hidden;
   transition: width 0.7s;
 }
-.products-menu__container {
-  padding: 2.2222222222rem 4rem 2.4444444444rem 1.4444444444rem;
+@media screen and (max-width: 480px) {
+  .products-menu__content-text {
+    font-size: 16px;
+  }
 }
-.products-menu__close {
-  position: absolute;
-  top: 1.1111111111rem;
-  right: 1.3333333333rem;
-  border: none;
-  fill: #fff;
+.products-menu__container {
+  padding: 1.6666666667rem 4.4444444444rem 2.4444444444rem 2.1111111111rem;
+}
+
+.hidden {
+  z-index: -10;
 }
 
 .reviews__display {
@@ -1189,7 +1234,8 @@ img {
   position: absolute;
   top: 8%;
   right: 0;
-  z-index: -10;
+  width: 7.5555555556rem;
+  height: 4.3333333333rem;
 }
 @media screen and (max-width: 768px) {
   .section__reviews:after {

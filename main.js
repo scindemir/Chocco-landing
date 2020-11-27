@@ -52,6 +52,84 @@ let slider = $('.products-slider').bxSlider({
     slider.goToNextSlide();
   });
 
+// products menu
+
+const measureWidth = menuItem => {
+  let reqItemWidth = 0;
+  const screenWidth = $(window).width();
+  const container = menuItem.closest('.products-menu');
+  const titleBlock = container.find('.products-menu__title');
+  const titleWidth = titleBlock.width() * titleBlock.length;
+  const textContainer = menuItem.find('.products-menu__container');
+  const paddingLeft = parseInt(textContainer.css('padding-left'));
+  const paddingRight = parseInt(textContainer.css('padding-right'));
+
+  const isTablet = window.matchMedia('(max-width: 768px)').matches;
+  if (isTablet) {
+    reqItemWidth = screenWidth - titleWidth;
+  } else {
+    reqItemWidth = 500;
+  }
+
+  return {
+    container: reqItemWidth,
+    textContainer: reqItemWidth - paddingLeft - paddingRight
+  }
+}
+
+
+const closeMenuItems = container => {
+  const menuItems = container.find('.products-menu__item');
+  const content = container.find('.products-menu__content');
+  const otherItems = menuItems.siblings();
+  const isMobile = window.matchMedia('(max-width: 480px)').matches;
+
+  if (isMobile) {
+    //needs to be fixed
+    //DOESNT SHOW
+    otherItems.show();
+  }
+
+  menuItems.removeClass('active');
+  content.width(0);
+} 
+
+const openMenuItem = menuItem => {
+  const hiddenContent = menuItem.find('.products-menu__content');
+  const reqWidth = measureWidth(menuItem);
+  const menuTextBlock = menuItem.find('.products-menu__container');
+  const isMobile = window.matchMedia('(max-width: 480px)').matches;
+  const otherItems = menuItem.siblings('.products-menu__item');
+  const title = menuItem.closest('.products-menu__item');
+
+  if (isMobile) {
+    otherItems.hide();
+    hiddenContent.width($(window).width()-title.width());
+    menuTextBlock.width($(window).width()-title.width() - 60);
+  } else {
+    menuItem.addClass('active');
+    hiddenContent.width(reqWidth.container);
+    menuTextBlock.width(reqWidth.textContainer);
+  }
+
+  
+}
+
+$('.products-menu__title').on('click', e => {
+  e.preventDefault();
+  const $this = $(e.currentTarget);
+  const menuItem = $this.closest('.products-menu__item');
+  const menuItemOpened = menuItem.hasClass('active');
+  const container = $this.closest('.products-menu');
+
+  if(menuItemOpened) {
+    closeMenuItems(container);
+  } else {
+    closeMenuItems(container);
+    openMenuItem(menuItem);
+  }
+})
+
 
 
 //reviews switcher

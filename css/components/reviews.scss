@@ -131,7 +131,9 @@
     position: absolute;
     top: 8%;
     right: 0;
-    z-index: -10;
+    width: rem(136px);
+    height: rem(78px);
+
 
     @include tablets {
       width: 136px;

@@ -65,8 +65,11 @@ const measureWidth = menuItem => {
   const paddingRight = parseInt(textContainer.css('padding-right'));
 
   const isTablet = window.matchMedia('(max-width: 768px)').matches;
+  const isMobile = window.matchMedia('(max-width: 480px)').matches;
   if (isTablet) {
     reqItemWidth = screenWidth - titleWidth;
+  } else if (isMobile) {
+    reqItemWidth = screenWidth;
   } else {
     reqItemWidth = 500;
   }
@@ -81,14 +84,6 @@ const measureWidth = menuItem => {
 const closeMenuItems = container => {
   const menuItems = container.find('.products-menu__item');
   const content = container.find('.products-menu__content');
-  const otherItems = menuItems.siblings();
-  const isMobile = window.matchMedia('(max-width: 480px)').matches;
-
-  if (isMobile) {
-    //needs to be fixed
-    //DOESNT SHOW
-    otherItems.show();
-  }
 
   menuItems.removeClass('active');
   content.width(0);
@@ -99,19 +94,15 @@ const openMenuItem = menuItem => {
   const reqWidth = measureWidth(menuItem);
   const menuTextBlock = menuItem.find('.products-menu__container');
   const isMobile = window.matchMedia('(max-width: 480px)').matches;
-  const otherItems = menuItem.siblings('.products-menu__item');
-  const title = menuItem.closest('.products-menu__item');
-
+  const screenWidth = $(window).width();
+ 
+  menuItem.addClass('active');
   if (isMobile) {
-    otherItems.hide();
-    hiddenContent.width($(window).width()-title.width());
-    menuTextBlock.width($(window).width()-title.width() - 60);
+    hiddenContent.width(screenWidth);
   } else {
-    menuItem.addClass('active');
     hiddenContent.width(reqWidth.container);
     menuTextBlock.width(reqWidth.textContainer);
   }
-
   
 }
 
@@ -203,6 +194,46 @@ $('.team__title').on('click', (e) => {
     triangle.addClass('active');
   }
 })
+
+// player youtube
+
+let player;
+const playerContainer = $('.player');
+
+let eventsInit = () => {
+  $('.player__start').on('click', e => {
+    e.preventDefault();
+
+    if (playerContainer.hasClass('paused')) {
+      playerContainer.removeClass('paused');
+      player.pauseVideo();
+    }
+    playerContainer.addClass('paused');
+    player.playVideo();
+  })
+}
+
+function onYouTubeIframeAPIReady() {
+   player = new YT.Player('yt-player', {
+          height: '390',
+          width: '660',
+          videoId: '7yLxxyzGiko',
+          events: {
+            //'onReady': onPlayerReady,
+            //'onStateChange': onPlayerStateChange
+          },
+          playerVars: {
+            controls: 0,
+            disablekb: 0,
+            showInfo: 0,
+            rel: 0,
+            autoplay: 0,
+            modestBranding: 0
+          }
+    });
+}
+
+eventsInit();
 
 // form modal
 

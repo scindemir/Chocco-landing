@@ -4,6 +4,7 @@
   background-color: #F8FAF9;
   overflow: hidden;
   position: relative;
+  
 
   &:before {
     content: "";
@@ -114,7 +115,23 @@
     position: absolute;
     bottom: rem(-150px);
     left: rem(-78px);
+    width: rem(134px);
+    height: rem(193px);
+    
+    @include tablets {
+      width: rem(118px);
+      height: rem(170px);
+      background-size: contain;
+      left: -7%;
+      bottom: -47%;
+    }
 
+    @include phones {
+      width: rem(122px);
+      height: rem(176px);
+      left: -7%;
+       bottom: -26%;
+    }
   }
 
   @include tablets {
@@ -144,10 +161,25 @@
   }
 
   &:before {
-    content: url("../img/png/ornament.png");
+    content: "";
+    background-image: url("../img/png/ornament.png");
     position: absolute;
     bottom: -28%;
     left: 0;
+    width: rem(102px);
+    height: rem(320px);
+
+    @include tablets {
+      width: rem(90px);
+      height: rem(282px);
+      bottom: -10%;
+      background-size: contain;
+    }
+
+    @include phones {
+      width: rem(74px);
+      height: rem(234px);
+    }
   }
 }
 

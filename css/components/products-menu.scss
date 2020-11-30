@@ -51,9 +51,18 @@
   right: 0;
   bottom: 0;
   display: flex;
+  justify-content: flex-end;
 
   &__item{
     display: flex;
+
+    &.active {
+      @include phones {
+        flex-shrink: 0;
+        order: 1;
+        width: 100%;
+      }
+    }
   }
 
   &__title {
@@ -114,4 +123,17 @@
 
 .hidden {
   z-index: -10;
+}
+
+.button_container.button_menu {
+  position: absolute;
+  top: rem(6px);
+  right: rem(10px);
+  display: none;
+  height: 10px;
+  width: 10px;
+  
+  @include phones {
+    display: block;
+  }
 }

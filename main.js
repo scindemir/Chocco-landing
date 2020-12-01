@@ -103,10 +103,9 @@ const openMenuItem = menuItem => {
     hiddenContent.width(reqWidth.container);
     menuTextBlock.width(reqWidth.textContainer);
   }
-  
 }
 
-$('.products-menu__title').on('click', e => {
+$('.products-menu__item').on('click', e => {
   e.preventDefault();
   const $this = $(e.currentTarget);
   const menuItem = $this.closest('.products-menu__item');
@@ -120,8 +119,6 @@ $('.products-menu__title').on('click', e => {
     openMenuItem(menuItem);
   }
 })
-
-
 
 //reviews switcher
 
@@ -196,7 +193,7 @@ $('.team__title').on('click', (e) => {
 })
 
 // player youtube
-
+/*
 let player;
 const playerContainer = $('.player');
 
@@ -234,6 +231,22 @@ function onYouTubeIframeAPIReady() {
 }
 
 eventsInit();
+*/
+let video;
+let DurationControl;
+let soundControl;
+let intervalId;
+let soundLevel;
+
+$().ready(function() {
+  initVars();
+
+});
+
+function initVars() {
+  DurationControl = document.getElementById('')
+}
+
 
 // form modal
 

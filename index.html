@@ -536,11 +536,6 @@
             <div class="products-menu__content">
               <div class="products-menu__container">
                 <div class="products-menu__content-text">
-                  <div class="button_container button_menu">
-                    <svg class="btn-close">
-                      <use xlink:href="./img/sprite/sprite.svg#close"></use>
-                    </svg>
-                    </div>
                   <p>
                    Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.
                   </p> 
@@ -556,11 +551,6 @@
             <div class="products-menu__content">
               <div class="products-menu__container">
                 <div class="products-menu__content-text">
-                  <div class="button_container button_menu">
-                    <svg class="btn-close">
-                      <use xlink:href="./img/sprite/sprite.svg#close"></use>
-                    </svg>
-                    </div>
                   <p>
                    Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.
                   </p> 
@@ -576,11 +566,6 @@
             <div class="products-menu__content">
               <div class="products-menu__container">
                 <div class="products-menu__content-text">
-                  <div class="button_container button_menu">
-                    <svg class="btn-close">
-                      <use xlink:href="./img/sprite/sprite.svg#close"></use>
-                    </svg>
-                    </div>
                   <p>
                    Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.
                   </p> 
@@ -675,15 +660,36 @@
           </div>
           <div class="player active">
             <div class="player__wrapper">
-              <div id="yt-player" class="player__elem"></div>
+              <video id="yt-player" class="player__elem"></video>
               <div class="player__splash">
 
               </div>
             </div>
             <div class="player__controls">
-              <button class="player__start"></button>
-              <div class="player__playback"></div>
-              <div class="player__duration"></div>
+              <div class="player__controls-col--left">
+                 <button class="player__start">
+                <div class="player__controls-button" id="playButton">
+                  <svg class="playbutton">
+                    <use xlink:href="./img/sprite/sprite.svg#playbuttonsmall"></use>
+                  </svg>
+                  </div>
+              </button>
+              <button class="player__playback"></button>
+              <div class="player__duration">
+                <input type="range" class="duration__length" id="durationLevel">
+              </div>
+              </div>
+             <div class="player__controls-col--right">
+               <div class="player__sound-icon">
+                  <div class="player__controls-button" id="soundicon">
+                    <svg class="soundicon">
+                      <use xlink:href="./img/sprite/sprite.svg#soundicon"></use>
+                    </svg>
+                  </div>
+              </div>
+              <div class="player__sound-progress">
+                  <input type="range" class="duration__length duration__length-sound" id="soundLevel">
+              </div>
             </div>
           </div>
         </div>

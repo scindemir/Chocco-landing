@@ -659,18 +659,17 @@
             <h2 class="section__head-title">как мы работаем</h2>
           </div>
           <div class="player active">
-            <div class="player__wrapper">
-              <video controls poster="./img/png/video.png" id="yt-player" class="player__elem"></video>
-              <div class="player__splash">
+            <div class="player__wrapper"><div class="player__splash">
                 <button class="player__start player__start-big">
-                  <div class="player__controls-button">
+                  <div class="player__controls-button player__controls-button--big">
                     <svg class="playbutton playbutton-big">
                       <use xlink:href="./img/sprite/sprite.svg#playbuttonbig"></use>
                     </svg>
                   </div>
                 </button>
               </div>
-            
+              <video controls poster="./img/png/video.png" id="yt-player" class="player__elem"></video>
+              
             <div class="player__controls">
               <div class="player__controls-col--left">
                  <button class="player__start">
@@ -681,7 +680,6 @@
                   </span>
                   </div>
               </button>
-             <!--<button class="player__playback"></button>-->
               <div class="player__duration">
                 <input type="range" class="duration__length" id="durationLevel">
               </div>

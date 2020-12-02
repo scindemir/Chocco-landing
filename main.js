@@ -196,13 +196,8 @@ let player;
 const playerContainer = $('.player');
 
 let eventsInit = () => {
-
-  $('.player__elem').click(e => {
-    play();
-  });
   
-  const play = () => {
-    $('.player__start').click(e => {
+  $('.player__start, .player__container').click(e => {
       e.preventDefault();
       const btn = $(e.currentTarget);
 
@@ -219,7 +214,7 @@ let eventsInit = () => {
       }
       
   });
-  }
+
 }
 
 
@@ -271,7 +266,7 @@ function mute() {
 function onYouTubeIframeAPIReady() {
    player = new YT.Player('yt-player', {
           height: '390',
-          width: '660',
+          width: '662',
           videoId: '7yLxxyzGiko',
           events: {
             'onReady': onPlayerReady
@@ -281,7 +276,7 @@ function onYouTubeIframeAPIReady() {
             disablekb: 0,
             showinfo: 0,
             rel: 0,
-            autoplay: 0,
+            autoplay: 1,
             modestBranding: 1,
             autohide: 1
           }

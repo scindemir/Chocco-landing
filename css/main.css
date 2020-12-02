@@ -1456,11 +1456,13 @@ img {
 @media screen and (max-width: 768px) {
   .player__elem {
     width: 33rem;
+    height: 19.4444444444rem;
   }
 }
 @media screen and (max-width: 480px) {
   .player__elem {
     width: 21.8888888889rem;
+    height: 13rem;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1560,11 +1562,11 @@ img {
 }
 .playbutton.playbutton-big {
   fill: #fff;
-  width: 4.1111111111rem;
-  height: 6.1111111111rem;
+  width: 5.5555555556rem;
+  height: 7.2222222222rem;
   position: absolute;
-  top: 35%;
-  left: 46%;
+  top: 32%;
+  left: 44%;
 }
 @media screen and (max-width: 768px) {
   .playbutton.playbutton-big {
@@ -1787,6 +1789,24 @@ input[type=range]:focus::-ms-fill-upper {
   opacity: 0;
 }
 
+.player__start.player__start-big {
+  width: 662px;
+  height: 390px;
+  position: absolute;
+}
+@media screen and (max-width: 768px) {
+  .player__start.player__start-big {
+    width: 33rem;
+    height: 19.4444444444rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .player__start.player__start-big {
+    width: 21.8888888889rem;
+    height: 13rem;
+  }
+}
+
 .section__order {
   background: url("../img/png/pattern.png");
   color: #0b4d3c;
@@ -1995,7 +2015,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 @media screen and (max-width: 480px) {
   .section.section__map {
-    margin-top: -10%;
+    margin-top: -12%;
   }
 }
 

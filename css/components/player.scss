@@ -89,10 +89,12 @@
 
     @include tablets {
       width: rem(594px);
+      height: rem(350px);
     }
-
+  
     @include phones {
       width: rem(394px);
+      height: rem(234px);
     }
   }
 
@@ -149,7 +151,6 @@
 }
 
 
-
 .player__controls {
   position: absolute;
   bottom: 0;
@@ -166,6 +167,10 @@
 
   &-button {
     fill: #626262;
+
+    &.player__controls-button--big {
+      
+    }
   }
 
   @include phones {
@@ -202,11 +207,11 @@
 
   &.playbutton-big {
     fill: #fff;
-    width: rem(74px);
-    height: rem(110px);
+    width: rem(100px);
+    height: rem(130px);
     position: absolute;
-    top: 35%;
-    left: 46%;
+    top: 32%;
+    left: 44%;
 
     @include tablets {
       width: rem(68px);
@@ -404,4 +409,19 @@ input[type=range]:focus::-ms-fill-upper {
 
 .player__start.player__start-big.player__start-big--active {
   opacity: 0;
+}
+.player__start.player__start-big {
+  width: 662px;
+  height: 390px;
+  position: absolute;
+
+  @include tablets {
+    width: rem(594px);
+    height: rem(350px);
+  }
+
+  @include phones {
+    width: rem(394px);
+    height: rem(234px);
+  }
 }

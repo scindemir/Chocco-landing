@@ -353,3 +353,38 @@ $('.app-close-modal').on('click', (e) =>{
 
   $.fancybox.close();
 })
+
+
+// yandex map
+
+let myMap;
+const init = () => {
+  myMap = new ymaps.Map("map", {
+     center: [55.748677, 37.587018],
+     zoom: 15,
+     controls: []
+});
+
+  const coodrs = [
+    [55.751999,37.576133],
+    [55.748191,37.583501],
+    [55.753510,37.586455],
+    [55.748099,37.591525]
+  ];
+
+  const myCollection = new ymaps.GeoObjectCollection({}, {
+    draggable: false,
+    iconLayout: 'default#image',
+    iconImageHref: './img/png/mapicon.png',
+    iconImageSize: [58, 73]
+  });
+
+  coodrs.forEach(coord => {
+    myCollection.add(new ymaps.Placemark(coord));
+  });
+
+  myMap.geoObjects.add(myCollection);
+
+  myMap.behaviors.disable('scrollZoom');
+};
+ymaps.ready(init);

@@ -1953,6 +1953,13 @@ input[type=range]:focus::-ms-fill-upper {
   transform: translate(-50%, -50%);
 }
 
+.map {
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  right: 0;
+}
+
 .fixed-menu {
   position: fixed;
   top: 32%;

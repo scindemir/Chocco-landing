@@ -1953,8 +1953,10 @@ input[type=range]:focus::-ms-fill-upper {
   transform: translate(-50%, -50%);
 }
 
-.section.section__map {
-  margin-top: -10%;
+@media screen and (max-width: 480px) {
+  .section.section__map {
+    margin-top: -10%;
+  }
 }
 
 .map {

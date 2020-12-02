@@ -386,5 +386,6 @@ const init = () => {
   myMap.geoObjects.add(myCollection);
 
   myMap.behaviors.disable('scrollZoom');
+  myMap.behaviors.disable('drag');
 };
 ymaps.ready(init);

@@ -196,23 +196,30 @@ let player;
 const playerContainer = $('.player');
 
 let eventsInit = () => {
+
+  $('.player__elem').click(e => {
+    play();
+  });
   
-  $('.player__elem, .player__start').click(e => {
+  const play = () => {
+    $('.player__start').click(e => {
       e.preventDefault();
       const btn = $(e.currentTarget);
 
       if(playerContainer.hasClass('paused')){
         playerContainer.removeClass('paused');
         $('.player__start-big').toggleClass('player__start-big--active');
+        $('#play-button-container').toggleClass('active');
         player.pauseVideo();
       } else {
         playerContainer.addClass('paused');
         $('.player__start-big').toggleClass('player__start-big--active');
+        $('#play-button-container').toggleClass('active');
         player.playVideo();
       }
       
   });
-
+  }
 }
 
 
@@ -252,8 +259,10 @@ function mute() {
   if(!!player.isMuted())
       {
         player.unMute();
+        $('#soundicon').css('fill', '#626262');
       } else {
         player.mute();
+        $('#soundicon').css('fill', '#000');
       }
 }
 
@@ -265,21 +274,21 @@ function onYouTubeIframeAPIReady() {
           width: '660',
           videoId: '7yLxxyzGiko',
           events: {
-            'onReady': onPlayerReady,
-            //'onStateChange': onPlayerStateChange
+            'onReady': onPlayerReady
           },
           playerVars: {
             controls: 0,
             disablekb: 0,
-            showInfo: 0,
+            showinfo: 0,
             rel: 0,
             autoplay: 0,
-            modestBranding: 0
+            modestBranding: 1,
+            autohide: 1
           }
     });
 }
-
 eventsInit();
+
 
 
 // form modal

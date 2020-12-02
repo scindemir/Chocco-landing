@@ -221,6 +221,37 @@
   }
 }
 
+#play-button-container {
+  display: inline-block;
+  width: rem(10px);
+  height: rem(16px);
+  cursor: pointer;
+  vertical-align: middle;
+  margin-right: rem(25px);
+}
+.play-button {
+  display: inline-block;
+  position: absolute;
+  width: rem(10px);
+  height: rem(16px);
+  background: #626262;
+  transition: clip-path .3s ease;
+}
+.play-button-before {
+  clip-path: polygon(0 0, 50% 25%, 50% 75%, 0% 100%);
+}
+.play-button-after {
+  clip-path: polygon(50% 25%, 100% 50%, 100% 50%, 50% 75%);
+}
+
+
+#play-button-container.active .play-button-before {
+  clip-path: polygon(0 0, 30% 0, 30% 100%, 0% 100%);
+}
+#play-button-container.active .play-button-after{
+  clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%)
+}
+
 .duration__length {
   width: rem(444px);
   height: rem(6px);

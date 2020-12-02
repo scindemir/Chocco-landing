@@ -1580,6 +1580,46 @@ img {
   }
 }
 
+#play-button-container {
+  display: inline-block;
+  width: 0.5555555556rem;
+  height: 0.8888888889rem;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-right: 1.3888888889rem;
+}
+
+.play-button {
+  display: inline-block;
+  position: absolute;
+  width: 0.5555555556rem;
+  height: 0.8888888889rem;
+  background: #626262;
+  transition: -webkit-clip-path 0.3s ease;
+  transition: clip-path 0.3s ease;
+  transition: clip-path 0.3s ease, -webkit-clip-path 0.3s ease;
+}
+
+.play-button-before {
+  -webkit-clip-path: polygon(0 0, 50% 25%, 50% 75%, 0% 100%);
+          clip-path: polygon(0 0, 50% 25%, 50% 75%, 0% 100%);
+}
+
+.play-button-after {
+  -webkit-clip-path: polygon(50% 25%, 100% 50%, 100% 50%, 50% 75%);
+          clip-path: polygon(50% 25%, 100% 50%, 100% 50%, 50% 75%);
+}
+
+#play-button-container.active .play-button-before {
+  -webkit-clip-path: polygon(0 0, 30% 0, 30% 100%, 0% 100%);
+          clip-path: polygon(0 0, 30% 0, 30% 100%, 0% 100%);
+}
+
+#play-button-container.active .play-button-after {
+  -webkit-clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%);
+          clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%);
+}
+
 .duration__length {
   width: 24.6666666667rem;
   height: 0.3333333333rem;

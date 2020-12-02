@@ -174,8 +174,6 @@ const closeEveryItem = container => {
   items.height(0);
 }
 
-
-
 $('.team__title').on('click', (e) => {
   const $this = $(e.currentTarget);
   const container = $this.closest('.team');
@@ -193,22 +191,73 @@ $('.team__title').on('click', (e) => {
 })
 
 // player youtube
-/*
+
 let player;
 const playerContainer = $('.player');
 
 let eventsInit = () => {
-  $('.player__start').on('click', e => {
-    e.preventDefault();
+  
+  $('.player__elem, .player__start').click(e => {
+      e.preventDefault();
+      const btn = $(e.currentTarget);
 
-    if (playerContainer.hasClass('paused')) {
-      playerContainer.removeClass('paused');
-      player.pauseVideo();
-    }
-    playerContainer.addClass('paused');
-    player.playVideo();
-  })
+      if(playerContainer.hasClass('paused')){
+        playerContainer.removeClass('paused');
+        $('.player__start-big').toggleClass('player__start-big--active');
+        player.pauseVideo();
+      } else {
+        playerContainer.addClass('paused');
+        $('.player__start-big').toggleClass('player__start-big--active');
+        player.playVideo();
+      }
+      
+  });
+
 }
+
+
+const onPlayerReady = () => {
+  
+  const durationSec = player.getDuration();
+  const durationStart = 0;
+  const durationLine = $('#durationLevel');
+
+    durationLine.attr('min', durationStart);
+    durationLine.attr('max', durationSec);
+    
+   interval = setInterval(() => {
+     const completedSec = player.getCurrentTime();
+      durationLine.attr('value', completedSec);
+        durationLine.change(function(evt){
+        player.seekTo($(evt.currentTarget).val());
+    });
+   })
+
+  const soundControl = $('#soundLevel');
+    soundControl.attr('min', 0);
+    soundControl.attr('max', 100);
+    soundControl.attr('value', 100);
+    soundControl.change(function(sound){
+        player.setVolume($(sound.currentTarget).val());
+      });
+
+  const muteButton = $('#soundicon');
+  muteButton.click(e => {
+    e.preventDefault();
+    mute();
+  });
+}
+
+function mute() {
+  if(!!player.isMuted())
+      {
+        player.unMute();
+      } else {
+        player.mute();
+      }
+}
+
+
 
 function onYouTubeIframeAPIReady() {
    player = new YT.Player('yt-player', {
@@ -216,7 +265,7 @@ function onYouTubeIframeAPIReady() {
           width: '660',
           videoId: '7yLxxyzGiko',
           events: {
-            //'onReady': onPlayerReady,
+            'onReady': onPlayerReady,
             //'onStateChange': onPlayerStateChange
           },
           playerVars: {
@@ -231,21 +280,6 @@ function onYouTubeIframeAPIReady() {
 }
 
 eventsInit();
-*/
-let video;
-let DurationControl;
-let soundControl;
-let intervalId;
-let soundLevel;
-
-$().ready(function() {
-  initVars();
-
-});
-
-function initVars() {
-  DurationControl = document.getElementById('')
-}
 
 
 // form modal

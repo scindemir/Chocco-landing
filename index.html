@@ -653,18 +653,24 @@
         </div>
       </section>
 
-      <section class="section player-section">
-        <div class="container">
+      <section class="section section__player">
+        <div class="container player-container">
           <div class="section__head">
             <h2 class="section__head-title">как мы работаем</h2>
           </div>
           <div class="player active">
             <div class="player__wrapper">
-              <video id="yt-player" class="player__elem"></video>
+              <video controls poster="./img/png/video.png" id="yt-player" class="player__elem"></video>
               <div class="player__splash">
-
+                <button class="player__start player__start-big">
+                  <div class="player__controls-button">
+                    <svg class="playbutton playbutton-big">
+                      <use xlink:href="./img/sprite/sprite.svg#playbuttonbig"></use>
+                    </svg>
+                  </div>
+                </button>
               </div>
-            </div>
+            
             <div class="player__controls">
               <div class="player__controls-col--left">
                  <button class="player__start">
@@ -674,7 +680,7 @@
                   </svg>
                   </div>
               </button>
-              <button class="player__playback"></button>
+             <!--<button class="player__playback"></button>-->
               <div class="player__duration">
                 <input type="range" class="duration__length" id="durationLevel">
               </div>
@@ -693,6 +699,7 @@
             </div>
           </div>
         </div>
+      </div>
       </section>
 
       <section class="section section__order">

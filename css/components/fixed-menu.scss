@@ -4,6 +4,10 @@
   right: 3%;
   z-index: $z-fixed-menu;
 
+  @include tablets {
+    display: none;
+  }
+
   @include phones {
     right: 1%;
   }
@@ -12,7 +16,7 @@
 .fixed-menu__item {
   margin-bottom: rem(5px);
 
-  &--active {
+  &--active, &:hover {
     .fixed-menu__link {
       border-color: #fff;
     }
@@ -38,5 +42,19 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+
+.fixed-menu.dark {
+  .fixed-menu__link:before{
+    transition: 1s;
+    background: #626262;
+  }
+  
+  .fixed-menu__item--active, .fixed-menu__item:hover{
+    .fixed-menu__link {
+      transition: 1s;
+      border-color: #626262;
+    }
   }
 }

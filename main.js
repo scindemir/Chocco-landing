@@ -28,6 +28,94 @@ let menuOpenBurger = (function (buttonClass, menuClass) {
 
 menuOpenBurger.open();
 
+// OPS
+
+const sections = $('.section');
+const display = $('.page-content');
+
+let inScroll = false;
+
+sections.first().addClass('active');
+
+const performTransition = sectionEq => {
+  if (inScroll === false) {
+    inScroll = true;
+    const position = sectionEq * -100;
+
+    const currentSection = sections.eq(sectionEq);
+    const menuTheme = currentSection.attr('data-sidemenu-theme');
+    const sideMenu = $('.fixed-menu');
+    if (menuTheme === 'dark'){
+      sideMenu.addClass('dark');
+    } else {
+      sideMenu.removeClass('dark');
+    }
+
+    display.css({
+      transform: `translateY(${position}%)`,
+    });
+
+    sections.eq(sectionEq).addClass('active').siblings().removeClass('active');
+    sideMenu.find('.fixed-menu__item').eq(sectionEq).addClass('fixed-menu__item--active').siblings().removeClass('fixed-menu__item--active');
+
+    setTimeout(() => {
+      inScroll = false;
+      
+    }, 1300);
+  }
+};
+
+const scrollViewport = direction => {
+  const activeSection = sections.filter('.active');
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+  if (direction === 'next' && nextSection.length {
+    performTransition(nextSection.index());
+  }
+  if (direction === 'prev' && prevSection.length) {
+    performTransition(prevSection.index());
+  } 
+}
+
+$(window).on('wheel', e => {
+  const deltaY = e.originalEvent.deltaY;
+
+  if (deltaY > 0) {
+    scrollViewport('next');
+  } 
+
+  if (deltaY < 0) {
+    scrollViewport('prev');
+  }
+});
+
+$(window).on('keydown', e => {
+
+  const tagName = e.target.tagName.toLowerCase();
+
+  if (tagName !== 'input' && tagName !== 'textarea') {
+    switch (e.keyCode) {
+    case 38: //prev
+    scrollViewport('prev');
+    break;
+    case 40: //next
+    scrollViewport('next');
+    break;
+  }
+  }
+  
+});
+
+$('[data-scroll-to]').on('click', e => {
+  e.preventDefault();
+  const $this = $(e.currentTarget);
+
+  const target = $this.attr('data-scroll-to');
+  const reqSection = $(`[data-section-id = ${target}]`);
+
+  performTransition(reqSection.index());
+})
+
 //product slider
 
 let touchDevice = false;
@@ -197,7 +285,7 @@ const playerContainer = $('.player');
 
 let eventsInit = () => {
   
-  $('.player__start, .player__container').click(e => {
+  $('.player__start').click(e => {
       e.preventDefault();
       const btn = $(e.currentTarget);
 
@@ -276,7 +364,7 @@ function onYouTubeIframeAPIReady() {
             disablekb: 0,
             showinfo: 0,
             rel: 0,
-            autoplay: 1,
+            autoplay: 0,
             modestBranding: 1,
             autohide: 1
           }

@@ -210,18 +210,19 @@
     width: rem(100px);
     height: rem(130px);
     position: absolute;
-    top: 32%;
+    top: 33%;
     left: 44%;
 
     @include tablets {
-      width: rem(68px);
-      height: rem(98px);
+      top: 34%;
+      left: 43%;
     }
 
     @include phones {
-      width: rem(44px);
-      height: rem(66px);
-      top: 45%;
+      left: 38%;
+      top: 40%;
+      width: rem(118px);
+      height: rem(148px);
     }
   }
 }

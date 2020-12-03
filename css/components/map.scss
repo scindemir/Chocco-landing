@@ -1,12 +1,12 @@
 .section.section__map{
   @include phones {
-    margin-top: -12%;
+    margin-top: -13%;
   }
 }
 
 .map {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   left: 0; 
   right: 0;
 }

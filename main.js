@@ -69,7 +69,7 @@ const scrollViewport = direction => {
   const activeSection = sections.filter('.active');
   const nextSection = activeSection.next();
   const prevSection = activeSection.prev();
-  if (direction === 'next' && nextSection.length {
+  if (direction === 'next' && nextSection.length) {
     performTransition(nextSection.index());
   }
   if (direction === 'prev' && prevSection.length) {

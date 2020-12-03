@@ -401,7 +401,8 @@ function onYouTubeIframeAPIReady() {
             rel: 0,
             autoplay: 0,
             modestBranding: 1,
-            autohide: 1
+            autohide: 1,
+            origin:'http://localhost:8100'
           }
     });
 }

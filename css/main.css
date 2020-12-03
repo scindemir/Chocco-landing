@@ -2035,6 +2035,7 @@ input[type=range]:focus::-ms-fill-upper {
 @media screen and (max-width: 480px) {
   .section.section__map {
     margin-top: -13%;
+    margin-bottom: 10%;
   }
 }
 

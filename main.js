@@ -32,68 +32,98 @@ menuOpenBurger.open();
 
 const sections = $('.section');
 const display = $('.page-content');
-
+const sideMenu = $('.fixed-menu');
+const menuItems = sideMenu.find('.fixed-menu__item');
 let inScroll = false;
 
 sections.first().addClass('active');
 
+const countSectionPosition = sectionEq => {
+  const position = sectionEq * -100;
+  if (isNaN(position)) {
+    console.error('not a number income at countSectionPosition');
+    return 0;
+  }
+  return position;
+}
+
+const ChangeTheme = sectionEq => {
+  const currentSection = sections.eq(sectionEq);
+    const menuTheme = currentSection.attr('data-sidemenu-theme');
+    const activeClass = 'dark';
+
+    if (menuTheme === 'dark'){
+      sideMenu.addClass(activeClass);
+    } else {
+      sideMenu.removeClass(activeClass);
+    }
+};
+
+const resetActiveClassForItem = (items, itemEq, activeClass) => {
+  items.eq(itemEq).addClass(activeClass).siblings().removeClass(activeClass);
+}
+
 const performTransition = sectionEq => {
   if (inScroll === false) {
+    const transitionOver = 1000;
+    const mouseIntertionOver = 300;
+
     inScroll = true;
-    const position = sectionEq * -100;
+    const position = countSectionPosition(sectionEq);
 
-    const currentSection = sections.eq(sectionEq);
-    const menuTheme = currentSection.attr('data-sidemenu-theme');
-    const sideMenu = $('.fixed-menu');
-    if (menuTheme === 'dark'){
-      sideMenu.addClass('dark');
-    } else {
-      sideMenu.removeClass('dark');
-    }
-
+    ChangeTheme(sectionEq);
+    
     display.css({
       transform: `translateY(${position}%)`,
     });
 
-    sections.eq(sectionEq).addClass('active').siblings().removeClass('active');
-    sideMenu.find('.fixed-menu__item').eq(sectionEq).addClass('fixed-menu__item--active').siblings().removeClass('fixed-menu__item--active');
+    resetActiveClassForItem(sections, sectionEq, 'active');
+    resetActiveClassForItem(menuItems, sectionEq, 'fixed-menu__item--active');
 
     setTimeout(() => {
       inScroll = false;
       
-    }, 1300);
+    }, transitionOver + mouseIntertionOver);
   }
 };
 
-const scrollViewport = direction => {
+const viewportScroller = () => {
   const activeSection = sections.filter('.active');
   const nextSection = activeSection.next();
   const prevSection = activeSection.prev();
-  if (direction === 'next' && nextSection.length) {
+
+  return {
+    next() {
+      if (nextSection.length) {
     performTransition(nextSection.index());
-  }
-  if (direction === 'prev' && prevSection.length) {
+      }
+    },
+    prev() {
+      if (prevSection.length) {
     performTransition(prevSection.index());
-  } 
-}
+      } 
+    },
+  };
+};
 
 $(window).on('wheel', e => {
   const deltaY = e.originalEvent.deltaY;
+  const scroller = viewportScroller();
 
   if (deltaY > 0) {
-    scrollViewport('next');
+    scroller.next();
   } 
 
   if (deltaY < 0) {
-    scrollViewport('prev');
+    scroller.prev();
   }
 });
 
 $(window).on('keydown', e => {
-
   const tagName = e.target.tagName.toLowerCase();
+  const userTypingInputs = tagName === 'input' || tagName === 'textarea';
 
-  if (tagName !== 'input' && tagName !== 'textarea') {
+  if (!userTypingInputs) {
     switch (e.keyCode) {
     case 38: //prev
     scrollViewport('prev');

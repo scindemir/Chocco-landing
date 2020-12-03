@@ -13,7 +13,7 @@
   
 <div class="wrapper">
   <main class="page-content">
-      <section data-sidemenu-theme="light" data-section-id="hero" class="section hero">
+      <section id="hero" data-sidemenu-theme="light" data-section-id="hero" class="section hero">
         <div class="container hero__container">
           <header class="header">
             <svg class="logo">
@@ -91,7 +91,7 @@
         </div>
       </section>
 
-      <section data-sidemenu-theme="dark" data-section-id="about" class="section section__about">
+      <section id="about" data-sidemenu-theme="dark" data-section-id="about" class="section section__about">
         <div class="container">
           <div class="section__head">
             <h2 class="section__head-title">почему chocco?</h2>
@@ -142,7 +142,7 @@
         </div>
       </section>
       
-      <section data-sidemenu-theme="dark" data-section-id="products" class="section section__products">
+      <section id="products" data-sidemenu-theme="dark" data-section-id="products" class="section section__products">
         <div class="container">
           <div class="products-slider">
             <div class="products-slider__arrows">
@@ -368,7 +368,7 @@
         </div>
       </section>
 
-      <section data-sidemenu-theme="dark" data-section-id="team" class="section section__team">
+      <section id="team" data-sidemenu-theme="dark" data-section-id="team" class="section section__team">
         <div class="container">
           <div class="section__head section__head--team">
             <h2 class="section__head-title section__head-title--team">команда</h2>
@@ -525,7 +525,7 @@
        </div>
       </section>
 
-      <section data-sidemenu-theme="light" data-section-id="menu" class="section products-menu-section">
+      <section id="menu" data-sidemenu-theme="light" data-section-id="menu" class="section products-menu-section">
         <h1 class="section__title products-menu-section__title">Меню</h1>
         <ul class="products-menu">
           <li class="products-menu__item">
@@ -577,7 +577,7 @@
 
       </section>
 
-      <section data-sidemenu-theme="dark" data-section-id="reviews" class="section section__reviews">
+      <section id="reviews" data-sidemenu-theme="dark" data-section-id="reviews" class="section section__reviews">
         <div class="container">
           <div class="section__head">
             <h2 class="section__head-title">отзывы</h2>
@@ -653,7 +653,7 @@
         </div>
       </section>
 
-      <section data-sidemenu-theme="dark" data-section-id="player" class="section section__player">
+      <section id="player" data-sidemenu-theme="dark" data-section-id="player" class="section section__player">
         <div class="container player-container">
           <div class="section__head">
             <h2 class="section__head-title">как мы работаем</h2>
@@ -701,7 +701,7 @@
       </div>
       </section>
 
-      <section data-sidemenu-theme="light" data-section-id="order" class="section section__order">
+      <section id="order" data-sidemenu-theme="light" data-section-id="order" class="section section__order">
         <div class="container">
           <div class="section__head">
             <h2 class="section__head-title">закажите доставку</h2>
@@ -782,7 +782,7 @@
         </div>
       </section>
 
-      <section data-sidemenu-theme="dark" data-section-id="map" class="section section__map">
+      <section id="mapSection" data-sidemenu-theme="dark" data-section-id="map" class="section section__map">
         <div class="map" id="map"></div>
         <div class="container footer__container">
           <footer class="footer">
@@ -819,18 +819,17 @@
         </div>
       </section>
     
-      <div id="modal" class="modal">
-        <div class="modal__container">
-          <div class="modal__content">
-            Cообщение отправлено
-          </div>
-        <div class="modal__button-container">
-            <a href="#" class="btn app-close-modal btn__theme--green">Закрыть</a>
-        </div>
-      </div>
-      </div>
-   
   </main>
+  <div id="modal" class="modal">
+    <div class="modal__container">
+      <div class="modal__content">
+        Cообщение отправлено
+      </div>
+      <div class="modal__button-container">
+        <a href="#" class="btn app-close-modal btn__theme--green">Закрыть</a>
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -857,37 +856,37 @@
   <nav class="hamburger__menu hamburger__menu--active body-active-menu">
     <ul class="hamburger__menu-list">
         <li class="hamburger__menu-item">
-          <a href="#" data-scroll-to="about" class="hamburger__menu-link">
+          <a href="#about" class="hamburger__menu-link">
             О нас
           </a>
         </li>
         <li class="hamburger__menu-item">
-          <a href="#" data-scroll-to="products" class="hamburger__menu-link">
+          <a href="#products" class="hamburger__menu-link">
             Батончики
           </a>
         </li>
         <li class="hamburger__menu-item">
-          <a href="#" data-scroll-to="team" class="hamburger__menu-link">
+          <a href="#team" class="hamburger__menu-link">
             Команда
           </a>
         </li>
         <li class="hamburger__menu-item">
-          <a href="#" data-scroll-to="menu" class="hamburger__menu-link">
+          <a href="#menu" class="hamburger__menu-link">
             Меню
           </a>
         </li>
         <li class="hamburger__menu-item">
-          <a href="#" data-scroll-to="reviews" class="hamburger__menu-link">
+          <a href="#reviews" class="hamburger__menu-link">
             Отзывы
           </a>
         </li>
         <li class="hamburger__menu-item">
-          <a href="#" data-scroll-to="player" class="hamburger__menu-link">
+          <a href="#player" class="hamburger__menu-link">
             Как мы работаем
           </a>
         </li>
         <li class="hamburger__menu-item">
-          <a href="#" data-scroll-to="map" class="hamburger__menu-link">
+          <a href="#mapSection" data-jump-to="map" class="hamburger__menu-link">
             Контакты
           </a>
         </li>

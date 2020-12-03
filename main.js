@@ -125,15 +125,16 @@ $(window).on('wheel', e => {
 
 $(window).on('keydown', e => {
   const tagName = e.target.tagName.toLowerCase();
+  const scroller = viewportScroller();
   const userTypingInputs = tagName === 'input' || tagName === 'textarea';
 
   if (!userTypingInputs) {
     switch (e.keyCode) {
     case 38: //prev
-    scrollViewport('prev');
+    scroller.prev();
     break;
     case 40: //next
-    scrollViewport('next');
+    scroller.next();
     break;
   }
   }

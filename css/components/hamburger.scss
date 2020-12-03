@@ -9,11 +9,13 @@
   flex-direction: column;
   justify-content: space-between;
   display: none;
+  
 
   @include tablets {
     display: flex;
   }
 }
+
 
 .hamburger.hamburger--active {
     opacity: 0.7; }
@@ -82,7 +84,7 @@
   &-list {
     flex-direction: column;
     margin-top: 20%;
-
+    align-items: center;
   }
 
   &-link {
@@ -146,4 +148,8 @@
     top: 28px;
     right: 10px;
   }
+}
+
+.hamburger__menu-list.hamburger {
+    width: auto;
 }

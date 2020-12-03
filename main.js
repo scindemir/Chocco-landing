@@ -5,18 +5,22 @@ let menuOpenBurger = (function (buttonClass, menuClass) {
   let menu = document.querySelector(menuClass);
   let body = document.querySelector('body');
   let buttonClose = document.querySelector('.btn-close');
+  let menuButton = document.querySelector('.hamburger__menu-list');
+  
 
   let _toggleMenu = function (e) {
     button.classList.toggle('hamburger--active');
     menu.classList.toggle('overlay--open');
     body.classList.toggle('body-active-menu');
-    buttonClose.classList.toggle('hamburger')
+    buttonClose.classList.toggle('hamburger');
+    menuButton.classList.toggle('hamburger');
   }
   
 
   let addListeners = function () {
     button.addEventListener('click', _toggleMenu);
     buttonClose.addEventListener('click', _toggleMenu);
+    menuButton.addEventListener('click', _toggleMenu);
   };
 
   return {
@@ -28,7 +32,7 @@ let menuOpenBurger = (function (buttonClass, menuClass) {
 
 menuOpenBurger.open();
 
-// OPS
+// OPS scroll for desktop
 
 const sections = $('.section');
 const display = $('.page-content');

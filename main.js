@@ -151,6 +151,19 @@ $('[data-scroll-to]').on('click', e => {
   performTransition(reqSection.index());
 })
 
+let widthForScroll = $(window).width(); //scroll button behavior for desktops
+    if (widthForScroll > 768) {
+      $('[data-jump-to]').on('click', e => {
+        e.preventDefault();
+        const $this = $(e.currentTarget);
+        const target = $this.attr('data-jump-to');
+        const reqSection = $(`[data-section-id = ${target}]`);
+
+        performTransition(reqSection.index());
+        });
+    }
+
+
 //product slider
 
 let touchDevice = false;
